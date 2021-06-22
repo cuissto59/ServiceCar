@@ -8542,24 +8542,26 @@
     ]
   },
   "packageFolders": {
-    "/home/hannibal/.nuget/packages/": {}
+    "C:\\Users\\gamer\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/media/hmd377/#Workspace/#Web_Workspace/#asp_workspace/serviceCar/serviceCar.csproj",
+      "projectUniqueName": "C:\\Users\\gamer\\RiderProjects\\serviceCar\\serviceCar.csproj",
       "projectName": "serviceCar",
-      "projectPath": "/media/hmd377/#Workspace/#Web_Workspace/#asp_workspace/serviceCar/serviceCar.csproj",
-      "packagesPath": "/home/hannibal/.nuget/packages/",
-      "outputPath": "/media/hmd377/#Workspace/#Web_Workspace/#asp_workspace/serviceCar/obj/",
+      "projectPath": "C:\\Users\\gamer\\RiderProjects\\serviceCar\\serviceCar.csproj",
+      "packagesPath": "C:\\Users\\gamer\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\gamer\\RiderProjects\\serviceCar\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/home/hannibal/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\gamer\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -8639,7 +8641,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/3.1.410/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.410\\RuntimeIdentifierGraph.json"
       }
     }
   }

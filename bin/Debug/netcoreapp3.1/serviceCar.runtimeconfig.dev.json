@@ -1,8 +1,8 @@
 {
   "runtimeOptions": {
     "additionalProbingPaths": [
-      "/home/hannibal/.dotnet/store/|arch|/|tfm|",
-      "/home/hannibal/.nuget/packages"
+      "C:\\Users\\gamer\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\gamer\\.nuget\\packages"
     ]
   }
 }
