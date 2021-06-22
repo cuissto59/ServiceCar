@@ -8542,19 +8542,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\gamer\\.nuget\\packages\\": {}
+    "C:\\Users\\hilia\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\gamer\\RiderProjects\\serviceCar\\serviceCar.csproj",
+      "projectUniqueName": "C:\\Users\\hilia\\OneDrive\\Bureau\\c# project\\serviceCar\\serviceCar.csproj",
       "projectName": "serviceCar",
-      "projectPath": "C:\\Users\\gamer\\RiderProjects\\serviceCar\\serviceCar.csproj",
-      "packagesPath": "C:\\Users\\gamer\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\gamer\\RiderProjects\\serviceCar\\obj\\",
+      "projectPath": "C:\\Users\\hilia\\OneDrive\\Bureau\\c# project\\serviceCar\\serviceCar.csproj",
+      "packagesPath": "C:\\Users\\hilia\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\hilia\\OneDrive\\Bureau\\c# project\\serviceCar\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\gamer\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\hilia\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -8566,6 +8571,7 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "projectReferences": {}
         }
       },
@@ -8577,6 +8583,7 @@
     },
     "frameworks": {
       "netcoreapp3.1": {
+        "targetAlias": "netcoreapp3.1",
         "dependencies": {
           "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation": {
             "target": "Package",

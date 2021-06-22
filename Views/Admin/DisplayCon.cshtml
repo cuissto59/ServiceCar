@@ -1,0 +1,89 @@
+﻿@model IEnumerable<serviceCar.Models.DbModels.Conductor>
+
+
+
+@{
+    ViewBag.Title = "DisplayCon";
+}
+
+<h2>DisplayCon</h2>
+
+<p>
+    @Html.ActionLink("Create New", "AddCon")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.UserNavigation.IdUser)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UserNavigation.FName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UserNavigation.LName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UserNavigation.Login)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UserNavigation.Password)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UserNavigation.IsAdmin)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Cin)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TelephoneNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Adress)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Active)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.UserNavigation.IsAdmin)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UserNavigation.FName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UserNavigation.LName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UserNavigation.Login)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UserNavigation.Password)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UserNavigation.IsAdmin)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cin)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TelephoneNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Adress)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Active)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "EditCon", new {  id=item.User }) |
+                @Html.ActionLink("Delete", "DeleteCon", new { id = item.User })
+            </td>
+        </tr>
+    }
+
+</table>
