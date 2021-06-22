@@ -12,9 +12,7 @@
     <title>Index</title>
 </head>
 <body>
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
+
 <table class="table">
     <thead>
         <tr>
@@ -55,9 +53,9 @@
                 @Html.DisplayFor(modelItem => item.UserNavigation.FName)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.User">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.User">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.User">Delete</a>
+                <a asp-action="Edit" asp-route-id="@item.User">Editer</a> |
+                <a asp-action="Profil" asp-route-id="@item.User">Profil</a> |
+                
             </td>
         </tr>
 }

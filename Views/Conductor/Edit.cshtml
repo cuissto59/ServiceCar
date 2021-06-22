@@ -16,35 +16,65 @@
 <h4>Conductor</h4>
 <hr />
 <div class="row">
+
     <div class="col-md-4">
-        <form asp-action="Edit">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <input type="hidden" asp-for="User" />
+        @using (Html.BeginForm())
+        {
+            @Html.HiddenFor(model=>model.User)
+            
+
             <div class="form-group">
-                <label asp-for="Cin" class="control-label"></label>
-                <input asp-for="Cin" class="form-control" />
-                <span asp-validation-for="Cin" class="text-danger"></span>
+                <div class="editor-label">
+                    @Html.LabelFor(model=>model.UserNavigation.Login)
+                </div>
+                <div class="editor-field">
+                    @Html.EditorFor(model=>model.UserNavigation.Login)
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="editor-label">
+                    @Html.LabelFor(model=>model.UserNavigation.Password)
+                </div>
+                <div class="editor-field">
+                    @Html.EditorFor(model=>model.UserNavigation.Password)
+                </div>
+            </div>
+
+
+            <div class="form-group">
+                <div class="editor-label">
+                    @Html.LabelFor(model=>model.Cin)
+                </div>
+                <div class="editor-field">
+                    @Html.EditorFor(model=>model.Cin)
+                </div>
             </div>
             <div class="form-group">
-                <label asp-for="TelephoneNumber" class="control-label"></label>
-                <input asp-for="TelephoneNumber" class="form-control" />
-                <span asp-validation-for="TelephoneNumber" class="text-danger"></span>
+                <div class="editor-label">
+                    @Html.LabelFor(model=>model.TelephoneNumber)
+                </div>
+                <div class="editor-field">
+                    @Html.EditorFor(model=>model.TelephoneNumber)
+                </div>
+                <!--<span asp-validation-for="TelephoneNumber" class="text-danger"></span>-->
             </div>
             <div class="form-group">
-                <label asp-for="Adress" class="control-label"></label>
-                <input asp-for="Adress" class="form-control" />
-                <span asp-validation-for="Adress" class="text-danger"></span>
+                <div class="editor-label">
+                    @Html.LabelFor(model=>model.Adress)
+                </div>
+                <div class="editor-field">
+                    @Html.EditorFor(model=>model.Adress)
+                </div>
+                <!--<span asp-validation-for="Adress" class="text-danger"></span>-->
             </div>
-            <div class="form-group form-check">
-                <label class="form-check-label">
-                    <input class="form-check-input" asp-for="Active" /> @Html.DisplayNameFor(model => model.Active)
-                </label>
-            </div>
+
             <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-primary" />
             </div>
-        </form>
-    </div>
+        
+    
+        }       
 </div>
 
 <div>

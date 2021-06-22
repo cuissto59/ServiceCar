@@ -56,13 +56,15 @@ namespace serviceCar.Controllers
             {
                 return NotFound();
             }
-
-            var conductor = await _context.Conductor.FindAsync(id);
+            
+            var conductor= await _context.Conductor.FirstOrDefaultAsync(m => m.User == id);
+            conductor.UserNavigation=await _context.User.FirstOrDefaultAsync(m => m.IdUser==id);
             if (conductor == null)
             {
                 return NotFound();
             }
-            ViewData["User"] = new SelectList(_context.User, "IdUser", "FName", conductor.User);
+
+            
             return View(conductor);
         }
 
@@ -71,18 +73,23 @@ namespace serviceCar.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("User,Cin,TelephoneNumber,Adress,Active")] Conductor conductor)
+        public async Task<IActionResult> Edit(int id, [Bind("Cin,TelephoneNumber,Adress,UserNavigation")] Conductor conductor)
         {
-            if (id != conductor.User)
-            {
-                return NotFound();
-            }
+
 
             if (ModelState.IsValid)
             {
                 try
                 {
-                    _context.Update(conductor);
+                    
+                    Conductor conductorC=await _context.Conductor
+                    .Include(c => c.UserNavigation)
+                    .FirstOrDefaultAsync(m => m.User == id);
+                    conductorC.Cin=conductor.Cin;
+                    conductorC.TelephoneNumber=conductor.TelephoneNumber;
+                    conductorC.Adress=conductor.Adress;
+                    conductorC.UserNavigation.Login=conductor.UserNavigation.Login;
+                    conductorC.UserNavigation.Password=conductor.UserNavigation.Password;
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)

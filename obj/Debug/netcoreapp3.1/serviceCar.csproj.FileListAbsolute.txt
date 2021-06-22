@@ -794,3 +794,6 @@ C:/Users/Ahmed/source/repos/serviceCar/obj/Debug/netcoreapp3.1/serviceCar.genrun
 /media/hmd377/#Workspace/#Web_Workspace/#asp_workspace/serviceCar/obj/Debug/netcoreapp3.1/Razor/Templates/ViewGenerator/Empty.cshtml.g.cs
 /media/hmd377/#Workspace/#Web_Workspace/#asp_workspace/serviceCar/obj/Debug/netcoreapp3.1/Razor/Templates/ViewGenerator/List.cshtml.g.cs
 /media/hmd377/#Workspace/#Web_Workspace/#asp_workspace/serviceCar/obj/Debug/netcoreapp3.1/Razor/Templates/ViewGenerator/_ValidationScriptsPartial.cshtml.g.cs
+/media/hmd377/#Workspace/#Web_Workspace/#asp_workspace/serviceCar/obj/Debug/netcoreapp3.1/Razor/Views/Conductor/Edit.cshtml.g.cs
+/media/hmd377/#Workspace/#Web_Workspace/#asp_workspace/serviceCar/obj/Debug/netcoreapp3.1/Razor/Views/Conductor/Index.cshtml.g.cs
+/media/hmd377/#Workspace/#Web_Workspace/#asp_workspace/serviceCar/obj/Debug/netcoreapp3.1/Razor/Views/Conductor/Profil.cshtml.g.cs

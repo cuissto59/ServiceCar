@@ -9,7 +9,7 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title>Details</title>
+    <title>Votre Profile</title>
 </head>
 <body>
 
@@ -17,40 +17,33 @@
     <h4>Conductor</h4>
     <hr />
     <dl class="row">
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Cin)
-        </dt>
+
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Cin)
+            <p>Prènom : @Html.DisplayFor(model => model.UserNavigation.FName)</p>
         </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.TelephoneNumber)
-        </dt>
+        
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.TelephoneNumber)
+            <p>Nom : @Html.DisplayFor(model => model.UserNavigation.LName)</p>
         </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Adress)
-        </dt>
+        
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Adress)
+            <p>Login : @Html.DisplayFor(model => model.UserNavigation.Login)</p>
         </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Active)
-        </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Active)
+            <p>Cin : @Html.DisplayFor(model => model.Cin)</p>
         </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.UserNavigation)
-        </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.UserNavigation.FName)
+            <p>Numéro de Télephone : @Html.DisplayFor(model => model.TelephoneNumber)</p>
         </dd>
+        <dd class = "col-sm-10">
+            <p>Adresse : @Html.DisplayFor(model => model.Adress)</p>
+        </dd>
+
+
     </dl>
 </div>
 <div>
-    <a asp-action="Edit" asp-route-id="@Model.User">Edit</a> |
+    <a asp-action="Edit" asp-route-id="@Model.User">Editer</a>
     <a asp-action="Index">Back to List</a>
 </div>
 </body>
