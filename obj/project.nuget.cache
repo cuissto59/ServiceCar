@@ -1,9 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "gsq4PBIOCUBFLoXNM7UShOs+hK3tLLH1f5/cuzN7GgbiY45JC50J+wnhjbf3DToDndBqPjapwMm42bd3G8Z1hA==",
+  "dgSpecHash": "OGbfSqXHxXn0m58yepJF1m0cK8BGohFeUQG5kQ7pjDwHLy+woHiPx+5hBB7XAzIH5kTACuAc/RiALYOhEp2i5Q==",
   "success": true,
   "projectFilePath": "/media/hmd377/#Workspace/#Web_Workspace/#asp_workspace/serviceCar/serviceCar.csproj",
   "expectedPackageFiles": [
+    "/home/hannibal/.nuget/packages/bootstrap/3.2.0/bootstrap.3.2.0.nupkg.sha512",
+    "/home/hannibal/.nuget/packages/jquery/1.9.0/jquery.1.9.0.nupkg.sha512",
+    "/home/hannibal/.nuget/packages/jquery.bootstrap.fontawesome/3.0.0/jquery.bootstrap.fontawesome.3.0.0.nupkg.sha512",
     "/home/hannibal/.nuget/packages/microsoft.aspnetcore.html.abstractions/2.2.0/microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",
     "/home/hannibal/.nuget/packages/microsoft.aspnetcore.mvc.razor.extensions/3.1.15/microsoft.aspnetcore.mvc.razor.extensions.3.1.15.nupkg.sha512",
     "/home/hannibal/.nuget/packages/microsoft.aspnetcore.mvc.razor.runtimecompilation/3.1.15/microsoft.aspnetcore.mvc.razor.runtimecompilation.3.1.15.nupkg.sha512",

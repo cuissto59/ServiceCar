@@ -14402,6 +14402,11 @@
   "RootNamespace": "serviceCar",
   "Documents": [
     {
+      "FilePath": "/media/hmd377/#Workspace/#Web_Workspace/#asp_workspace/serviceCar/Views/Home/ContactUs.cshtml",
+      "TargetPath": "Views\\Home\\ContactUs.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "/media/hmd377/#Workspace/#Web_Workspace/#asp_workspace/serviceCar/Views/Conductor/Index.cshtml",
       "TargetPath": "Views\\Conductor\\Index.cshtml",
       "FileKind": "mvc"
@@ -14414,6 +14419,11 @@
     {
       "FilePath": "/media/hmd377/#Workspace/#Web_Workspace/#asp_workspace/serviceCar/Templates/ViewGenerator/Edit.cshtml",
       "TargetPath": "Templates\\ViewGenerator\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/media/hmd377/#Workspace/#Web_Workspace/#asp_workspace/serviceCar/Views/Shared/_UsersLayout.cshtml",
+      "TargetPath": "Views\\Shared\\_UsersLayout.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -14494,6 +14504,11 @@
     {
       "FilePath": "/media/hmd377/#Workspace/#Web_Workspace/#asp_workspace/serviceCar/Views/Conductor/Edit.cshtml",
       "TargetPath": "Views\\Conductor\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/media/hmd377/#Workspace/#Web_Workspace/#asp_workspace/serviceCar/Views/Home/AboutUs.cshtml",
+      "TargetPath": "Views\\Home\\AboutUs.cshtml",
       "FileKind": "mvc"
     },
     {

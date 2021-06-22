@@ -737,7 +737,6 @@ C:/Users/Ahmed/source/repos/serviceCar/obj/Debug/netcoreapp3.1/serviceCar.genrun
 /media/hmd377/#Workspace/#Web_Workspace/#asp_workspace/serviceCar/obj/Debug/netcoreapp3.1/Razor/Views/Home/Index.cshtml.g.cs
 /media/hmd377/#Workspace/#Web_Workspace/#asp_workspace/serviceCar/obj/Debug/netcoreapp3.1/Razor/Views/Home/Privacy.cshtml.g.cs
 /media/hmd377/#Workspace/#Web_Workspace/#asp_workspace/serviceCar/obj/Debug/netcoreapp3.1/Razor/Views/Shared/Error.cshtml.g.cs
-/media/hmd377/#Workspace/#Web_Workspace/#asp_workspace/serviceCar/obj/Debug/netcoreapp3.1/Razor/Views/Shared/_Layout.cshtml.g.cs
 /media/hmd377/#Workspace/#Web_Workspace/#asp_workspace/serviceCar/obj/Debug/netcoreapp3.1/Razor/Views/Shared/_ValidationScriptsPartial.cshtml.g.cs
 /media/hmd377/#Workspace/#Web_Workspace/#asp_workspace/serviceCar/obj/Debug/netcoreapp3.1/Razor/Views/_ViewImports.cshtml.g.cs
 /media/hmd377/#Workspace/#Web_Workspace/#asp_workspace/serviceCar/obj/Debug/netcoreapp3.1/Razor/Views/_ViewStart.cshtml.g.cs
@@ -797,3 +796,7 @@ C:/Users/Ahmed/source/repos/serviceCar/obj/Debug/netcoreapp3.1/serviceCar.genrun
 /media/hmd377/#Workspace/#Web_Workspace/#asp_workspace/serviceCar/obj/Debug/netcoreapp3.1/Razor/Views/Conductor/Edit.cshtml.g.cs
 /media/hmd377/#Workspace/#Web_Workspace/#asp_workspace/serviceCar/obj/Debug/netcoreapp3.1/Razor/Views/Conductor/Index.cshtml.g.cs
 /media/hmd377/#Workspace/#Web_Workspace/#asp_workspace/serviceCar/obj/Debug/netcoreapp3.1/Razor/Views/Conductor/Profil.cshtml.g.cs
+/media/hmd377/#Workspace/#Web_Workspace/#asp_workspace/serviceCar/obj/Debug/netcoreapp3.1/Razor/Views/Shared/_UsersLayout.cshtml.g.cs
+/media/hmd377/#Workspace/#Web_Workspace/#asp_workspace/serviceCar/obj/Debug/netcoreapp3.1/Razor/Views/Home/AboutUs.cshtml.g.cs
+/media/hmd377/#Workspace/#Web_Workspace/#asp_workspace/serviceCar/obj/Debug/netcoreapp3.1/Razor/Views/Home/ContactUs.cshtml.g.cs
+/media/hmd377/#Workspace/#Web_Workspace/#asp_workspace/serviceCar/obj/Debug/netcoreapp3.1/Razor/Views/Shared/_Layout.cshtml.g.cs

@@ -14,7 +14,7 @@ namespace serviceCar.Controllers
     {
         private servicecarContext _context;
         private readonly ILogger<HomeController> _logger;
-
+        public String methodUsed="Index";
         public HomeController(ILogger<HomeController> logger, servicecarContext context)
         {
             _context = context;
@@ -23,11 +23,29 @@ namespace serviceCar.Controllers
 
         public IActionResult Index()
         {
+            methodUsed="Index";
+            ViewBag.methodUsed=methodUsed;
+            return View();
+        }
+
+        public IActionResult ContactUs()
+        {
+            methodUsed="ContactUs";
+            ViewBag.methodUsed=methodUsed;
+            return View();
+        }
+
+        public IActionResult AboutUs()
+        {
+            methodUsed="AboutUs";
+            ViewBag.methodUsed=methodUsed;
             return View();
         }
 
         public IActionResult Privacy()
         {
+            methodUsed="Privacy";
+            ViewBag.methodUsed=methodUsed;
             return View();
         }
 
