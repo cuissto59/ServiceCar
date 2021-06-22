@@ -7,6 +7,8 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Http;
+using Newtonsoft.Json;
 
 namespace serviceCar.Controllers
 {
@@ -21,10 +23,35 @@ namespace serviceCar.Controllers
             _logger = logger;
         }
 
-        public IActionResult Index()
+        public IActionResult Login()
         {
-            methodUsed="Index";
+            methodUsed="Login";
             ViewBag.methodUsed=methodUsed;
+            return View();
+        }
+
+        [HttpPost]  
+        [ValidateAntiForgeryToken]  
+        public ActionResult Login([Bind("Login,Password")]User objUser){
+            if(ModelState.IsValid){
+                var user=_context.User.Where(a=>a.Login.Equals(objUser.Login) && a.Password.Equals(objUser.Password) ).FirstOrDefault();
+                if(user!=null ){
+                    
+                    if(user.IsAdmin==false){
+                        
+                        HttpContext.Session.SetString("IdUser",user.IdUser.ToString());
+                        return RedirectToAction("Profil", "Conductor",new { id=HttpContext.Session.GetString("IdUser") });
+                    }
+                    else{
+                        HttpContext.Session.SetString("IdUser",user.IdUser.ToString());
+
+                        return RedirectToAction("Index", "Admin",new { id=HttpContext.Session.GetString("IdUser") });
+                    }
+                }
+                else{
+                    
+                }
+            }
             return View();
         }
 

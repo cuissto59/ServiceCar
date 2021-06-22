@@ -27,6 +27,9 @@ namespace serviceCar
         {
             services.AddDbContext<servicecarContext>(options => options.UseMySql(Configuration.GetConnectionString("servicecarContext")));
             services.AddControllersWithViews();
+            services.AddSession(Options=>{
+                Options.IdleTimeout=TimeSpan.FromMinutes(30);
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -44,7 +47,7 @@ namespace serviceCar
             }
             app.UseHttpsRedirection();
             app.UseStaticFiles();
-
+            app.UseSession();
             app.UseRouting();
 
             app.UseAuthorization();
@@ -53,7 +56,7 @@ namespace serviceCar
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
+                    pattern: "{controller=Home}/{action=Login}/{id?}");
             });
         }
     }

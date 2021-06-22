@@ -14487,8 +14487,8 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "/media/hmd377/#Workspace/#Web_Workspace/#asp_workspace/serviceCar/Views/Home/Index.cshtml",
-      "TargetPath": "Views\\Home\\Index.cshtml",
+      "FilePath": "/media/hmd377/#Workspace/#Web_Workspace/#asp_workspace/serviceCar/Views/Home/Login.cshtml",
+      "TargetPath": "Views\\Home\\Login.cshtml",
       "FileKind": "mvc"
     },
     {
