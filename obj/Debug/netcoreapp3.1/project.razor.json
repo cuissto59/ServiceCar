@@ -14442,6 +14442,16 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "/media/hmd377/#Workspace/#Web_Workspace/#asp_workspace/serviceCar/Views/Vehicle/Index.cshtml",
+      "TargetPath": "Views\\Vehicle\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/media/hmd377/#Workspace/#Web_Workspace/#asp_workspace/serviceCar/Views/Vehicle/Details.cshtml",
+      "TargetPath": "Views\\Vehicle\\Details.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "/media/hmd377/#Workspace/#Web_Workspace/#asp_workspace/serviceCar/Views/Conductor/Profil.cshtml",
       "TargetPath": "Views\\Conductor\\Profil.cshtml",
       "FileKind": "mvc"
@@ -14449,6 +14459,11 @@
     {
       "FilePath": "/media/hmd377/#Workspace/#Web_Workspace/#asp_workspace/serviceCar/Templates/ControllerGenerator/ApiControllerWithActions.cshtml",
       "TargetPath": "Templates\\ControllerGenerator\\ApiControllerWithActions.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/media/hmd377/#Workspace/#Web_Workspace/#asp_workspace/serviceCar/Views/Vehicle/Edit.cshtml",
+      "TargetPath": "Views\\Vehicle\\Edit.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -14472,6 +14487,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "/media/hmd377/#Workspace/#Web_Workspace/#asp_workspace/serviceCar/Views/Vehicle/Delete.cshtml",
+      "TargetPath": "Views\\Vehicle\\Delete.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "/media/hmd377/#Workspace/#Web_Workspace/#asp_workspace/serviceCar/Templates/ViewGenerator/List.cshtml",
       "TargetPath": "Templates\\ViewGenerator\\List.cshtml",
       "FileKind": "mvc"
@@ -14489,6 +14509,11 @@
     {
       "FilePath": "/media/hmd377/#Workspace/#Web_Workspace/#asp_workspace/serviceCar/Views/Home/Login.cshtml",
       "TargetPath": "Views\\Home\\Login.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/media/hmd377/#Workspace/#Web_Workspace/#asp_workspace/serviceCar/Views/Vehicle/Create.cshtml",
+      "TargetPath": "Views\\Vehicle\\Create.cshtml",
       "FileKind": "mvc"
     },
     {
