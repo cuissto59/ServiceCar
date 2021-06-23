@@ -16,7 +16,11 @@ namespace serviceCar.Controllers
         public AdminController(servicecarContext context)
         {
             _context = context;
+            
         }
+
+
+
         /*
          var servicecarContext = _context.Conductor.Include(c => c.UserNavigation);
             return View(await servicecarContext.ToListAsync());
@@ -25,6 +29,10 @@ namespace serviceCar.Controllers
         // GET: Admin
         public ActionResult Index()
         {
+            if (TempData["iduser"] == null)
+            {
+                return RedirectToAction("Login", "Home");
+            }
 
             return View();
         }
@@ -32,6 +40,12 @@ namespace serviceCar.Controllers
 
         public async Task<ActionResult> DisplayConAsync()
         {
+            if (TempData["iduser"] == null)
+            {
+                return RedirectToAction("Login", "Home");
+            }
+
+            
             var servicecarContext = _context.Conductor.Include(c => c.UserNavigation);
             return View(await servicecarContext.ToListAsync());
 

@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -28,6 +28,7 @@ namespace serviceCar.Controllers
         // GET: Conductor/Profil/1
         public async Task<IActionResult> Profil(int? id)
         {
+            
             if (id == null)
             {
                 return NotFound();
@@ -42,6 +43,11 @@ namespace serviceCar.Controllers
             }
 
             return View(conductor);
+        }
+
+        private IActionResult Content(object v)
+        {
+            throw new NotImplementedException();
         }
 
 

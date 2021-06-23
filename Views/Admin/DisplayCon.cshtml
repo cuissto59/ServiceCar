@@ -3,14 +3,16 @@
 
 
 @{
+    Layout = "_UsersLayout";
+
     ViewBag.Title = "DisplayCon";
 }
 
-<h2>DisplayCon</h2>
+<h2>Display Conductors</h2>
 
-<p>
-    @Html.ActionLink("Create New", "AddCon")
-</p>
+<h6>
+    @Html.ActionLink("Create New conductor", "AddCon")
+</h6>
 <table class="table">
     <tr>
         <th>
@@ -80,7 +82,7 @@
                 @Html.DisplayFor(modelItem => item.Active)
             </td>
             <td>
-                @Html.ActionLink("Edit", "EditCon", new {  id=item.User }) |
+                @Html.ActionLink("Edit", "EditCon", new { id = item.User }) |
                 @Html.ActionLink("Delete", "DeleteCon", new { id = item.User })
             </td>
         </tr>

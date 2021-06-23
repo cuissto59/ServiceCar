@@ -10,13 +10,18 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Newtonsoft.Json;
 
-namespace serviceCar.Controllers
+
+namespace serviceCar.Controllers 
 {
-    public class HomeController : Controller
+    public class HomeController : Controller 
     {
         private servicecarContext _context;
         private readonly ILogger<HomeController> _logger;
         public String methodUsed="Index";
+
+
+
+
         public HomeController(ILogger<HomeController> logger, servicecarContext context)
         {
             _context = context;
@@ -25,7 +30,9 @@ namespace serviceCar.Controllers
 
         public IActionResult Login()
         {
-            methodUsed="Login";
+            TempData["iduser"] = null;
+            TempData["isadmin"] = null;
+            methodUsed ="Login";
             ViewBag.methodUsed=methodUsed;
             return View();
         }
@@ -33,11 +40,15 @@ namespace serviceCar.Controllers
         [HttpPost]  
         [ValidateAntiForgeryToken]  
         public ActionResult Login([Bind("Login,Password")]User objUser){
-            if(ModelState.IsValid){
+            
+            if (ModelState.IsValid){
                 var user=_context.User.Where(a=>a.Login.Equals(objUser.Login) && a.Password.Equals(objUser.Password) ).FirstOrDefault();
                 if(user!=null ){
-                    
-                    if(user.IsAdmin==false){
+
+                    TempData["iduser"] = user.IdUser;
+                    TempData["isadmin"] = user.IsAdmin;
+                    if (user.IsAdmin==false){
+
                         
                         HttpContext.Session.SetString("IdUser",user.IdUser.ToString());
                         return RedirectToAction("Profil", "Conductor",new { id=HttpContext.Session.GetString("IdUser") });
@@ -45,7 +56,7 @@ namespace serviceCar.Controllers
                     else{
                         HttpContext.Session.SetString("IdUser",user.IdUser.ToString());
 
-                        return RedirectToAction("Index", "Admin",new { id=HttpContext.Session.GetString("IdUser") });
+                        return RedirectToAction("DisplayCon", "Admin",new { id=HttpContext.Session.GetString("IdUser") });
                     }
                 }
                 else{
