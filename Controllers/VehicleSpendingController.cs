@@ -21,6 +21,11 @@ namespace serviceCar.Controllers
         // GET: VehicleSpending
         public async Task<IActionResult> Index()
         {
+            if (TempData["iduser"] == null)
+            {
+                return RedirectToAction("Login", "Home");
+            }
+
             var servicecarContext = _context.VehicleSpending.Include(v => v.IdConductorSpNavigation).Include(v => v.IdVehicleSpNavigation);
             return View(await servicecarContext.ToListAsync());
         }
@@ -28,6 +33,10 @@ namespace serviceCar.Controllers
         // GET: VehicleSpending/Details/5
         public async Task<IActionResult> Details(int? id)
         {
+            if (TempData["iduser"] == null)
+            {
+                return RedirectToAction("Login", "Home");
+            }
             if (id == null)
             {
                 return NotFound();
@@ -48,6 +57,13 @@ namespace serviceCar.Controllers
         // GET: VehicleSpending/Create
         public IActionResult Create()
         {
+            if (TempData["iduser"] == null)
+            {
+                return RedirectToAction("Login", "Home");
+            }
+            else if((bool)TempData["isadmin"]){
+                return RedirectToAction("DisplayCon", "Admin",new {Id=(int)TempData["iduser"] });
+            }
             ViewData["IdConductorSp"] = new SelectList(_context.Conductor, "User", "Adress");
             ViewData["IdVehicleSp"] = new SelectList(_context.Vehicle, "IdVehicle", "Description");
             return View();
@@ -74,6 +90,13 @@ namespace serviceCar.Controllers
         // GET: VehicleSpending/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
+            if (TempData["iduser"] == null)
+            {
+                return RedirectToAction("Login", "Home");
+            }
+            else if((bool)TempData["isadmin"]){
+                return RedirectToAction("DisplayCon", "Admin",new {Id=(int)TempData["iduser"] });
+            }
             if (id == null)
             {
                 return NotFound();
@@ -129,6 +152,13 @@ namespace serviceCar.Controllers
         // GET: VehicleSpending/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
+            if (TempData["iduser"] == null)
+            {
+                return RedirectToAction("Login", "Home");
+            }
+            else if((bool)TempData["isadmin"]){
+                return RedirectToAction("DisplayCon", "Admin",new {Id=(int)TempData["iduser"] });
+            }
             if (id == null)
             {
                 return NotFound();

@@ -33,7 +33,9 @@ namespace serviceCar.Controllers
             {
                 return RedirectToAction("Login", "Home");
             }
-
+            else if(!(bool)TempData["isadmin"]){
+                return RedirectToAction("Profil", "Conductor",new {Id=(int)TempData["iduser"] });
+            }
             return View();
         }
         //ConductorDB();
@@ -44,8 +46,9 @@ namespace serviceCar.Controllers
             {
                 return RedirectToAction("Login", "Home");
             }
-
-            
+            else if(!(bool)TempData["isadmin"]){
+                return RedirectToAction("Profil", "Conductor",new {Id=(int)TempData["iduser"] });
+            }
             var servicecarContext = _context.Conductor.Include(c => c.UserNavigation);
             return View(await servicecarContext.ToListAsync());
 
@@ -53,7 +56,13 @@ namespace serviceCar.Controllers
 
         public ActionResult AddCon()
         {
-
+            if (TempData["iduser"] == null)
+            {
+                return RedirectToAction("Login", "Home");
+            }
+            else if(!(bool)TempData["isadmin"]){
+                return RedirectToAction("Profil", "Conductor",new {Id=(int)TempData["iduser"] });
+            }
             return View();
         }
 
@@ -61,6 +70,7 @@ namespace serviceCar.Controllers
         public ActionResult AddCon(Conductor cond)
         {
             //Add Conductor
+            
             var servicecarContext = _context.Conductor.Add(cond);
             _context.SaveChanges();
 
@@ -80,6 +90,13 @@ namespace serviceCar.Controllers
             if (id == null)
             {
                 return NotFound();
+            }
+            if (TempData["iduser"] == null)
+            {
+                return RedirectToAction("Login", "Home");
+            }
+            else if(!(bool)TempData["isadmin"]){
+                return RedirectToAction("Profil", "Conductor",new {Id=(int)TempData["iduser"] });
             }
 
             var conductor = await _context.Conductor.FirstOrDefaultAsync(m => m.User == id);
@@ -103,11 +120,19 @@ namespace serviceCar.Controllers
 
             //SaveProduct(Product product, string userID)
 
+
+                        if (TempData["iduser"] == null)
+            {
+                return RedirectToAction("Login", "Home");
+            }
+            else if(!(bool)TempData["isadmin"]){
+                return RedirectToAction("Profil", "Conductor",new {Id=(int)TempData["iduser"] });
+            }
             if (ModelState.IsValid)
             {
                 try
                 {
-
+                    
                     Conductor conductorC = await _context.Conductor
                     .Include(c => c.UserNavigation)
                     .FirstOrDefaultAsync(m => m.User == id);
@@ -158,6 +183,14 @@ namespace serviceCar.Controllers
             //var condToDelete = ConductorList.Where(c => c.id_user == id).FirstOrDefault();
 
 
+                        if (TempData["iduser"] == null)
+            {
+                return RedirectToAction("Login", "Home");
+            }
+            else if(!(bool)TempData["isadmin"]){
+                return RedirectToAction("Profil", "Conductor",new {Id=(int)TempData["iduser"] });
+            }
+
             if (id == null)
             {
                 return NotFound();
@@ -179,6 +212,14 @@ namespace serviceCar.Controllers
         {
             //var condToDelete = ConductorList.Where(c => c.id_user == id).FirstOrDefault();
             //ConductorList.Remove(condToDelete);
+
+                        if (TempData["iduser"] == null)
+            {
+                return RedirectToAction("Login", "Home");
+            }
+            else if(!(bool)TempData["isadmin"]){
+                return RedirectToAction("Profil", "Conductor",new {Id=(int)TempData["iduser"] });
+            }
 
             var con = new Conductor()
             {

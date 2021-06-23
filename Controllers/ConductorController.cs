@@ -19,16 +19,17 @@ namespace serviceCar.Controllers
         }
 
         // GET: Conductor
-        public async Task<IActionResult> Index()
-        {
-            var servicecarContext = _context.Conductor.Include(c => c.UserNavigation);
-            return View(await servicecarContext.ToListAsync());
-        }
 
         // GET: Conductor/Profil/1
         public async Task<IActionResult> Profil(int? id)
         {
-            
+           if (TempData["iduser"] == null)
+            {
+                return RedirectToAction("Login", "Home");
+            }
+            else if((bool)TempData["isadmin"]){
+                return RedirectToAction("DisplayCon", "Admin",new {Id=(int)TempData["iduser"] });
+            }            
             if (id == null)
             {
                 return NotFound();
@@ -58,6 +59,14 @@ namespace serviceCar.Controllers
         // GET: Conductor/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
+            if (TempData["iduser"] == null)
+            {
+                return RedirectToAction("Login", "Home");
+            }
+            else if((bool)TempData["isadmin"]){
+                return RedirectToAction("DisplayCon", "Admin",new {Id=(int)TempData["iduser"] });
+            }
+
             if (id == null)
             {
                 return NotFound();
@@ -82,7 +91,7 @@ namespace serviceCar.Controllers
         public async Task<IActionResult> Edit(int id, [Bind("Cin,TelephoneNumber,Adress,UserNavigation")] Conductor conductor)
         {
 
-
+            
             if (ModelState.IsValid)
             {
                 try
