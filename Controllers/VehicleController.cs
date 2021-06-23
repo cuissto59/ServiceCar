@@ -29,9 +29,9 @@ namespace serviceCar.Controllers
             else if (HttpContext.Session.GetString("isadmin") != "True")
             {
                 var vehicle = await _context.Vehicle
-                .Include(v => v.VehicleConductorNavigation)
-                .FirstOrDefaultAsync(m => m.VehicleConductor == HttpContext.Session.GetInt32("iduser"));
-                return RedirectToAction("Details", "Conductor" , new { id = vehicle.IdVehicle });
+               .Include(v => v.VehicleConductorNavigation)
+               .FirstOrDefaultAsync(m => m.VehicleConductor== HttpContext.Session.GetInt32("iduser"));
+                return RedirectToAction("Details", "Vehicle" , new { id = vehicle.IdVehicle });
             
             }
             
@@ -43,17 +43,18 @@ namespace serviceCar.Controllers
         public async Task<IActionResult> Details(int? id)
         {
             var id0 = id;
-            if(HttpContext.Session.GetInt32("iduser") == 0)
+            if (HttpContext.Session.GetInt32("iduser") == 0)
             {
                 return RedirectToAction("Login", "Home");
             }
             else if (HttpContext.Session.GetString("isadmin") != "True")
             {
                 var vehicle0 = await _context.Vehicle
-                .Include(v => v.VehicleConductorNavigation)
-                .FirstOrDefaultAsync(m => m.VehicleConductor == HttpContext.Session.GetInt32("iduser"));
+               .Include(v => v.VehicleConductorNavigation)
+               .FirstOrDefaultAsync(m => m.VehicleConductor == HttpContext.Session.GetInt32("iduser"));
                 id0 = vehicle0.IdVehicle;
             }
+
 
             if (id0 == null)
             {

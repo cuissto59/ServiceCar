@@ -26,7 +26,15 @@ namespace serviceCar.Controllers
             {
                 return RedirectToAction("Login", "Home");
             }
-            
+            else if (HttpContext.Session.GetString("isadmin") != "True")
+            {
+                var vehicleaBD = await _context.VehicleBreakdown
+               .Include(v => v.IdVehicleBdNavigation)
+               .FirstOrDefaultAsync(m => m.IdVehicleBdNavigation.VehicleConductor == HttpContext.Session.GetInt32("iduser"));
+                return RedirectToAction("Details", "VehicleBd", new { id = vehicleaBD.IdVehicleBd});
+
+            }
+
             var servicecarContext = _context.VehicleBreakdown.Include(v => v.IdVehicleBdNavigation);
             return View(await servicecarContext.ToListAsync());
         }
@@ -34,10 +42,19 @@ namespace serviceCar.Controllers
         // GET: VehicleBd/Details/5
         public async Task<IActionResult> Details(int? id)
         {
+            var id0 = id;
             if (HttpContext.Session.GetInt32("iduser") == 0)
             {
                 return RedirectToAction("Login", "Home");
             }
+            else if (HttpContext.Session.GetString("isadmin") != "True")
+            {
+                var vehicleaBD = await _context.VehicleBreakdown
+               .Include(v => v.IdVehicleBdNavigation)
+               .FirstOrDefaultAsync(m => m.IdVehicleBdNavigation.VehicleConductor == HttpContext.Session.GetInt32("iduser"));
+                id0 = vehicleaBD.IdVehicleBd;
+            }
+
 
             if (id == null)
             {

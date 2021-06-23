@@ -1,4 +1,4 @@
-using Microsoft.AspNetCore.Builder;
+﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.EntityFrameworkCore;
@@ -29,7 +29,10 @@ namespace serviceCar
             services.AddControllersWithViews();
             services.AddSession(Options=>{
                 Options.IdleTimeout=TimeSpan.FromMinutes(30);
+                
             });
+            services.AddHttpContextAccessor();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -1,4 +1,9 @@
-﻿<!DOCTYPE html>
+﻿@using Microsoft.AspNetCore.Http;
+@inject IHttpContextAccessor HttpContextAccessor
+@{ var isadmin = HttpContextAccessor.HttpContext.Session.GetString("isadmin");
+                var iduser = HttpContextAccessor.HttpContext.Session.GetInt32("isuser"); }
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -11,7 +16,7 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
     <link rel="stylesheet" href="~/css/Users/userStyle.css" />
-    
+
 </head>
 
 <body id="body-pd">
@@ -43,43 +48,120 @@
     <div class="l-navbar" id="nav-bar">
         <nav class="nav">
             <div>
+
                 <a href="#" class="nav_logo"> <i class='bx bx-layer nav_logo-icon'></i> <span class="nav_logo-name">BBBootstrap</span> </a>
                 <div class="nav_list">
-                    <a href="#" class="nav_link active"> 
-                        <i class='bx bx-grid-alt nav_icon'></i> 
-                        <span class="nav_name">Dashboard</span> 
-                    </a> 
-                    <a href="#" class="nav_link"> 
-                        <i class='bx bx-user nav_icon'></i> 
-                        <span class="nav_name">Depenses</span> 
-                    </a> 
-                    <a href="#" class="nav_link"> 
-                        <i class='bx bx-message-square-detail nav_icon'></i> 
-                        <span class="nav_name">Accident</span> 
-                    </a> 
-                    <a href="#" class="nav_link"> 
-                        <i class='bx bx-bookmark nav_icon'></i> 
-                        <span class="nav_name">Services</span> 
-                    </a> <a href="#" class="nav_link"> 
-                        <i class='bx bx-folder nav_icon'></i> 
-                        <span class="nav_name">Plan d'entretien</span> 
-                    </a> 
-                    <a href="#" class="nav_link"> 
-                        <i class='bx bx-bar-chart-alt-2 nav_icon'></i> 
-                        <span class="nav_name">Defaut</span> 
-                    </a> 
+                    @if (isadmin == "True")
+                    {
+        <a asp-controller="Admin" asp-action="DisplayCon" class="nav_link active">
+            <i class='bx bx-grid-alt nav_icon'></i>
+            <span class="nav_name">Conductors</span>
+        </a> }
+                    else
+                    {
+
+        <a asp-controller="Conductor" asp-action="Profil" asp-router-id="@iduser" class="nav_link active">
+            <i class='bx bx-grid-alt nav_icon'></i>
+            <span class="nav_name">My Profil</span>
+        </a>}
+
+                    @if (isadmin == "True")
+                    {
+        <a asp-controller="Vehicle" asp-action="Index" class="nav_link active">
+            <i class='bx bx-grid-alt nav_icon'></i>
+            <span class="nav_name">Vehicle</span>
+        </a> }
+                    else
+                    {
+
+        <a asp-controller="Vehicle" asp-action="Details" asp-router-id="@iduser" class="nav_link active">
+            <i class='bx bx-grid-alt nav_icon'></i>
+            <span class="nav_name">My Vehicle</span>
+        </a>}
+
+
+                    @if (isadmin == "True")
+                    {
+        <a asp-controller="VehicleBc" asp-action="Index" class="nav_link active">
+            <i class='bx bx-grid-alt nav_icon'></i>
+            <span class="nav_name">Buy Contracts</span>
+        </a> }
+                    else
+                    {
+
+        <a asp-controller="VehicleAccident" asp-action="Details" asp-router-id="@iduser" class="nav_link active">
+            <i class='bx bx-grid-alt nav_icon'></i>
+            <span class="nav_name">Accidents</span>
+        </a>}
+
+                    @if (isadmin == "True")
+                    {
+        <a asp-controller="VehicleAccident" asp-action="Index" class="nav_link active">
+            <i class='bx bx-grid-alt nav_icon'></i>
+            <span class="nav_name">Accidents</span>
+        </a> }
+                    else
+                    {
+
+        <a asp-controller="VehicleFuel" asp-action="Details" asp-router-id="@iduser" class="nav_link active">
+            <i class='bx bx-grid-alt nav_icon'></i>
+            <span class="nav_name">Vehicle Fuel</span>
+        </a>}
+
+
+                    @if (isadmin == "True")
+                    {
+        <a asp-controller="VehicleMp" asp-action="Index" class="nav_link active">
+            <i class='bx bx-grid-alt nav_icon'></i>
+            <span class="nav_name">Maintenance plan</span>
+        </a> }
+                    else
+                    {
+
+        <a asp-controller="VehicleMp" asp-action="Details" asp-router-id="@iduser" class="nav_link active">
+            <i class='bx bx-grid-alt nav_icon'></i>
+            <span class="nav_name">Maintenance Plan</span>
+        </a>}
+                    @if (isadmin == "True")
+                    {
+        <a asp-controller="VehicleReparation" asp-action="Index" class="nav_link active">
+            <i class='bx bx-grid-alt nav_icon'></i>
+            <span class="nav_name">Reparation</span>
+        </a> }
+                    else
+                    {
+
+        <a asp-controller="VehicleReparation" asp-action="Details" asp-router-id="@iduser" class="nav_link active">
+            <i class='bx bx-grid-alt nav_icon'></i>
+            <span class="nav_name">Reparation</span>
+        </a>}
+
+                    @if (isadmin == "True")
+                    {
+        <a asp-controller="VehicleFuel" asp-action="Index" class="nav_link active">
+            <i class='bx bx-grid-alt nav_icon'></i>
+            <span class="nav_name">Fuel spending</span>
+        </a>}
+                    else
+                    {
+
+
+                    }
+
+                    <a asp-controller="Home" asp-action="Logout" class="nav_link"> <i class='bx bx-log-out nav_icon'></i> <span class="nav_name">SignOut</span> </a>
+
                 </div>
-            </div> <a href="#" class="nav_link"> <i class='bx bx-log-out nav_icon'></i> <span class="nav_name">SignOut</span> </a>
+            </div>
         </nav>
     </div>
 
 
     <div class="container">
         <main role="main" class="pb-3">
-            @RenderBody();
+            @RenderBody()
         </main>
     </div>
-    <br/>
+    <br />
 
     <script src='~/js/Users/user.js'></script>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>

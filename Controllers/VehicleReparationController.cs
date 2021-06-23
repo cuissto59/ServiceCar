@@ -26,27 +26,51 @@ namespace serviceCar.Controllers
             {
                 return RedirectToAction("Login", "Home");
             }
+            else if (HttpContext.Session.GetString("isadmin") != "True")
+            {
+                var vehiclefRepa = await _context.VehicleReparation
+                .Include(v => v.IdVehicleReNavigation)
+                .FirstOrDefaultAsync(m => m.IdVehicleReNavigation.VehicleConductor == HttpContext.Session.GetInt32("iduser"));
+               if(vehiclefRepa.IdVehicleRe!=0)
+                {                
+                    return RedirectToAction("Details", "VehicleReparation", new { id = vehiclefRepa.IdVehicleRe });
+                }
+                else
+                {
+                    return RedirectToAction("Profil", "Conductor");
+                }
+            }
+
 
             var servicecarContext = _context.VehicleReparation.Include(v => v.IdVehicleReNavigation);
             return View(await servicecarContext.ToListAsync());
         }
 
         // GET: VehicleReparation/Details/5
-        public async Task<IActionResult> Details(int? id)
+        public async Task<IActionResult> Details(int id)
         {
-            if (TempData["iduser"] == null)
+            int id0 = id;
+            if (HttpContext.Session.GetInt32("iduser") == 0)
             {
                 return RedirectToAction("Login", "Home");
             }
-            
-            if (id == null)
+            else if (HttpContext.Session.GetString("isadmin") != "True")
+            {
+                var vehiclefRepa = await _context.VehicleReparation
+               .Include(v => v.IdVehicleReNavigation)
+               .FirstOrDefaultAsync(m => m.IdVehicleReNavigation.VehicleConductor == HttpContext.Session.GetInt32("iduser"));
+                id0 = vehiclefRepa.IdVehicleRe;
+
+            }
+
+            if (id0 == null)
             {
                 return NotFound();
             }
 
             var vehicleReparation = await _context.VehicleReparation
                 .Include(v => v.IdVehicleReNavigation)
-                .FirstOrDefaultAsync(m => m.IdVehicleRe == id);
+                .FirstOrDefaultAsync(m => m.IdVehicleRe == id0);
             if (vehicleReparation == null)
             {
                 return NotFound();

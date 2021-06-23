@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -21,31 +22,45 @@ namespace serviceCar.Controllers
         // GET: VehicleFuel
         public async Task<IActionResult> Index()
         {
-            if (TempData["iduser"] == null)
+            if (HttpContext.Session.GetInt32("iduser") == 0)
             {
                 return RedirectToAction("Login", "Home");
             }
-            
+            else if (HttpContext.Session.GetString("isadmin") != "True")
+            {
+                var vehiclefuel = await _context.VehicleFuel
+               .Include(v => v.IdSpFuNavigation)
+               .FirstOrDefaultAsync(m => m.IdSpFuNavigation.IdConductorSp == HttpContext.Session.GetInt32("iduser"));
+                return RedirectToAction("Details", "VehicleFuel", new { id = vehiclefuel.IdSpFu });
+            }
             var servicecarContext = _context.VehicleFuel.Include(v => v.IdSpFuNavigation);
             return View(await servicecarContext.ToListAsync());
         }
 
         // GET: VehicleFuel/Details/5
-        public async Task<IActionResult> Details(int? id)
+        public async Task<IActionResult> Details(int id)
         {
-            if (TempData["iduser"] == null)
+            var id0 = id;
+            if (HttpContext.Session.GetInt32("iduser") == 0)
             {
                 return RedirectToAction("Login", "Home");
             }
-            
-            if (id == null)
+            else if (HttpContext.Session.GetString("isadmin") != "True")
+            {
+                var vehiclefuel = await _context.VehicleFuel
+               .Include(v => v.IdSpFuNavigation)
+               .FirstOrDefaultAsync(m => m.IdSpFuNavigation.IdConductorSp == HttpContext.Session.GetInt32("iduser"));
+                id0 = vehiclefuel.IdSpFu;
+            }
+
+            if (id0 == null)
             {
                 return NotFound();
             }
 
             var vehicleFuel = await _context.VehicleFuel
                 .Include(v => v.IdSpFuNavigation)
-                .FirstOrDefaultAsync(m => m.IdSpFu == id);
+                .FirstOrDefaultAsync(m => m.IdSpFu == id0);
             if (vehicleFuel == null)
             {
                 return NotFound();
@@ -57,13 +72,14 @@ namespace serviceCar.Controllers
         // GET: VehicleFuel/Create
         public IActionResult Create()
         {
-            if (TempData["iduser"] == null)
+            if(HttpContext.Session.GetInt32("iduser") == 0)
             {
                 return RedirectToAction("Login", "Home");
             }
-            else if ((bool)TempData["isadmin"])
+            else if (HttpContext.Session.GetString("isadmin") == "True")
             {
-                return RedirectToAction("DisplayCon", "Admin" );
+
+                return RedirectToAction("DisplayCon", "Admin", new { Id = HttpContext.Session.GetInt32("iduser") });
             }
 
             ViewData["IdSpFu"] = new SelectList(_context.VehicleSpending, "IdSp", "Type");
@@ -90,13 +106,14 @@ namespace serviceCar.Controllers
         // GET: VehicleFuel/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
-            if (TempData["iduser"] == null)
+            if (HttpContext.Session.GetInt32("iduser") == 0)
             {
                 return RedirectToAction("Login", "Home");
             }
-            else if ((bool)TempData["isadmin"])
+            else if (HttpContext.Session.GetString("isadmin") == "True")
             {
-                return RedirectToAction("DisplayCon", "Admin");
+
+                return RedirectToAction("DisplayCon", "Admin", new { Id = HttpContext.Session.GetInt32("iduser") });
             }
 
             if (id == null)
@@ -152,13 +169,14 @@ namespace serviceCar.Controllers
         // GET: VehicleFuel/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
-            if (TempData["iduser"] == null)
+            if (HttpContext.Session.GetInt32("iduser") == 0)
             {
                 return RedirectToAction("Login", "Home");
             }
-            else if ((bool)TempData["isadmin"])
+            else if (HttpContext.Session.GetString("isadmin") == "True")
             {
-                return RedirectToAction("DisplayCon", "Admin");
+
+                return RedirectToAction("DisplayCon", "Admin", new { Id = HttpContext.Session.GetInt32("iduser") });
             }
 
             if (id == null)

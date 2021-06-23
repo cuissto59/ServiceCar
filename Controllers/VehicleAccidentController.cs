@@ -26,7 +26,14 @@ namespace serviceCar.Controllers
             {
                 return RedirectToAction("Login", "Home");
             }
-            
+            else if (HttpContext.Session.GetString("isadmin") != "True")
+            {
+                var vehicleaccident = await _context.VehicleAccident
+               .Include(v => v.IdVehicleAcNavigation)
+               .FirstOrDefaultAsync(m => m.IdVehicleAcNavigation.VehicleConductor == HttpContext.Session.GetInt32("iduser"));
+                return RedirectToAction("Details", "VehicleAccident",new { id= vehicleaccident.IdVehicleAc });
+
+            }
             var servicecarContext = _context.VehicleAccident.Include(v => v.IdVehicleAcNavigation);
             return View(await servicecarContext.ToListAsync());
         }
@@ -34,20 +41,27 @@ namespace serviceCar.Controllers
         // GET: VehicleAccident/Details/5
         public async Task<IActionResult> Details(int? id)
         {
+            var id0 = id;
             if (HttpContext.Session.GetInt32("iduser") == 0)
             {
                 return RedirectToAction("Login", "Home");
             }
-            
+            else if (HttpContext.Session.GetString("isadmin") != "True")
+            {
+                var vehicleaccident = await _context.VehicleAccident
+               .Include(v => v.IdVehicleAcNavigation)
+               .FirstOrDefaultAsync(m => m.IdVehicleAcNavigation.VehicleConductor == HttpContext.Session.GetInt32("iduser"));
+                id0 = vehicleaccident.IdVehicleAc;
+            }
 
-            if (id == null)
+            if (id0 == null)
             {
                 return NotFound();
             }
 
             var vehicleAccident = await _context.VehicleAccident
                 .Include(v => v.IdVehicleAcNavigation)
-                .FirstOrDefaultAsync(m => m.IdVehicleAc == id);
+                .FirstOrDefaultAsync(m => m.IdVehicleAc == id0);
             if (vehicleAccident == null)
             {
                 return NotFound();

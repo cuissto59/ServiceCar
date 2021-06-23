@@ -1,7 +1,8 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -21,21 +22,36 @@ namespace serviceCar.Controllers
         // GET: VehicleMp
         public async Task<IActionResult> Index()
         {
-            if (TempData["iduser"] == null)
+            if (HttpContext.Session.GetInt32("iduser") == 0)
             {
                 return RedirectToAction("Login", "Home");
             }
-            
+            else if (HttpContext.Session.GetString("isadmin") != "True")
+            {
+                var vehiclefMp = await _context.VehicleMaintenancePlan
+               .Include(v => v.IdVehicleMpNavigation)
+               .FirstOrDefaultAsync(m => m.IdVehicleMpNavigation.VehicleConductor == HttpContext.Session.GetInt32("iduser"));
+                return RedirectToAction("Details", "VehicleMp", new { id = vehiclefMp.IdVehicleMp });
+            }
+
             var servicecarContext = _context.VehicleMaintenancePlan.Include(v => v.IdVehicleMpNavigation);
             return View(await servicecarContext.ToListAsync());
         }
 
         // GET: VehicleMp/Details/5
-        public async Task<IActionResult> Details(int? id)
+        public async Task<IActionResult> Details(int id)
         {
-            if (TempData["iduser"] == null)
+            var id0 = id;
+            if (HttpContext.Session.GetInt32("iduser") == 0)
             {
                 return RedirectToAction("Login", "Home");
+            }
+            else if (HttpContext.Session.GetString("isadmin") != "True")
+            {
+                var vehiclefMp = await _context.VehicleMaintenancePlan
+               .Include(v => v.IdVehicleMpNavigation)
+               .FirstOrDefaultAsync(m => m.IdVehicleMpNavigation.VehicleConductor == HttpContext.Session.GetInt32("iduser"));
+                id0 = vehiclefMp.IdVehicleMp;
             }
             if (id == null)
             {
@@ -44,7 +60,7 @@ namespace serviceCar.Controllers
 
             var vehicleMaintenancePlan = await _context.VehicleMaintenancePlan
                 .Include(v => v.IdVehicleMpNavigation)
-                .FirstOrDefaultAsync(m => m.IdVehicleMp == id);
+                .FirstOrDefaultAsync(m => m.IdVehicleMp == id0);
             if (vehicleMaintenancePlan == null)
             {
                 return NotFound();

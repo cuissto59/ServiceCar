@@ -95,5 +95,12 @@ namespace serviceCar.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
+
+        public IActionResult Logout()
+        {
+            HttpContext.Session.SetInt32("iduser", 0);
+            HttpContext.Session.SetString("isadmin", "azert");
+            return RedirectToAction("Login","Home");
+        } 
     }
 }
