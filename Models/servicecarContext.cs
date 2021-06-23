@@ -34,7 +34,7 @@ namespace serviceCar.Models.DbModels
             if (!optionsBuilder.IsConfigured)
             {
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
-                optionsBuilder.UseMySql("Server=localhost;Port=3306;User=root;Password=;Database=servicecar");
+                optionsBuilder.UseMySql("Server=localhost;Port=3307;User=root;Password=;Database=servicecar");
             }
         }
 
@@ -522,6 +522,16 @@ namespace serviceCar.Models.DbModels
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("vehicle_spending_ibfk_1");
             });
+        }
+
+        internal void SaveChanges(int user)
+        {
+            throw new NotImplementedException();
+        }
+
+        internal object FromSqlInterpolated(string v)
+        {
+            throw new NotImplementedException();
         }
     }
 }
