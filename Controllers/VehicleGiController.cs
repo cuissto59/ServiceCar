@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -21,6 +21,15 @@ namespace serviceCar.Controllers
         // GET: VehicleGi
         public async Task<IActionResult> Index()
         {
+            if (TempData["iduser"] == null)
+            {
+                return RedirectToAction("Login", "Home");
+            }
+            else if (!(bool)TempData["isadmin"])
+            {
+                return RedirectToAction("Profil", "Conductor", new { id = (int)TempData["iduser"] });
+            }
+
             var servicecarContext = _context.VehicleGeneralInfo.Include(v => v.IdVehicleGiNavigation);
             return View(await servicecarContext.ToListAsync());
         }
@@ -28,6 +37,15 @@ namespace serviceCar.Controllers
         // GET: VehicleGi/Details/5
         public async Task<IActionResult> Details(int? id)
         {
+            if (TempData["iduser"] == null)
+            {
+                return RedirectToAction("Login", "Home");
+            }
+            else if (!(bool)TempData["isadmin"])
+            {
+                return RedirectToAction("Profil", "Conductor", new { id = (int)TempData["iduser"] });
+            }
+
             if (id == null)
             {
                 return NotFound();
@@ -47,6 +65,15 @@ namespace serviceCar.Controllers
         // GET: VehicleGi/Create
         public IActionResult Create()
         {
+            if (TempData["iduser"] == null)
+            {
+                return RedirectToAction("Login", "Home");
+            }
+            else if (!(bool)TempData["isadmin"])
+            {
+                return RedirectToAction("Profil", "Conductor", new { id = (int)TempData["iduser"] });
+            }
+
             ViewData["IdVehicleGi"] = new SelectList(_context.Vehicle, "IdVehicle", "Description");
             return View();
         }
@@ -71,6 +98,15 @@ namespace serviceCar.Controllers
         // GET: VehicleGi/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
+            if (TempData["iduser"] == null)
+            {
+                return RedirectToAction("Login", "Home");
+            }
+            else if (!(bool)TempData["isadmin"])
+            {
+                return RedirectToAction("Profil", "Conductor", new { id = (int)TempData["iduser"] });
+            }
+
             if (id == null)
             {
                 return NotFound();
@@ -124,6 +160,15 @@ namespace serviceCar.Controllers
         // GET: VehicleGi/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
+            if (TempData["iduser"] == null)
+            {
+                return RedirectToAction("Login", "Home");
+            }
+            else if (!(bool)TempData["isadmin"])
+            {
+                return RedirectToAction("Profil", "Conductor", new { id = (int)TempData["iduser"] });
+            }
+
             if (id == null)
             {
                 return NotFound();

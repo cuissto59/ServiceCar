@@ -46,9 +46,14 @@ namespace serviceCar.Controllers
             {
                 return RedirectToAction("Login", "Home");
             }
+<<<<<<< HEAD
             else if(!(bool)TempData["isadmin"]){
                 return RedirectToAction("Profil", "Conductor",new {Id=(int)TempData["iduser"] });
             }
+=======
+            
+            
+>>>>>>> 60610dcda1122744cae66a7911f55beaefaedcf0
             var servicecarContext = _context.Conductor.Include(c => c.UserNavigation);
             return View(await servicecarContext.ToListAsync());
 
@@ -60,15 +65,23 @@ namespace serviceCar.Controllers
             {
                 return RedirectToAction("Login", "Home");
             }
+<<<<<<< HEAD
             else if(!(bool)TempData["isadmin"]){
                 return RedirectToAction("Profil", "Conductor",new {Id=(int)TempData["iduser"] });
             }
+=======
+
+>>>>>>> 60610dcda1122744cae66a7911f55beaefaedcf0
             return View();
         }
 
         [HttpPost]
         public ActionResult AddCon(Conductor cond)
         {
+            if (TempData["iduser"] == null)
+            {
+                return RedirectToAction("Login", "Home");
+            }
             //Add Conductor
             
             var servicecarContext = _context.Conductor.Add(cond);

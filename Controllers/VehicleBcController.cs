@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -21,6 +21,15 @@ namespace serviceCar.Controllers
         // GET: VehicleBc
         public async Task<IActionResult> Index()
         {
+            if (TempData["iduser"] == null)
+            {
+                return RedirectToAction("Login", "Home");
+            }
+            else if (!(bool)TempData["isadmin"])
+            {
+                return RedirectToAction("Profil", "Conductor", new { id = (int)TempData["iduser"] });
+            }
+
             var servicecarContext = _context.VehicleBuyContract.Include(v => v.IdVehicleBcNavigation);
             return View(await servicecarContext.ToListAsync());
         }
@@ -28,6 +37,15 @@ namespace serviceCar.Controllers
         // GET: VehicleBc/Details/5
         public async Task<IActionResult> Details(int? id)
         {
+            if (TempData["iduser"] == null)
+            {
+                return RedirectToAction("Login", "Home");
+            }
+            else if (!(bool)TempData["isadmin"])
+            {
+                return RedirectToAction("Profil", "Conductor", new { id = (int)TempData["iduser"] });
+            }
+
             if (id == null)
             {
                 return NotFound();
@@ -47,6 +65,14 @@ namespace serviceCar.Controllers
         // GET: VehicleBc/Create
         public IActionResult Create()
         {
+            if (TempData["iduser"] == null)
+            {
+                return RedirectToAction("Login", "Home");
+            }
+            else if (!(bool)TempData["isadmin"])
+            {
+                return RedirectToAction("Profil", "Conductor", new { id = (int)TempData["iduser"] });
+            }
             ViewData["IdVehicleBc"] = new SelectList(_context.Vehicle, "IdVehicle", "Description");
             return View();
         }
@@ -71,6 +97,15 @@ namespace serviceCar.Controllers
         // GET: VehicleBc/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
+            if (TempData["iduser"] == null)
+            {
+                return RedirectToAction("Login", "Home");
+            }
+            else if (!(bool)TempData["isadmin"])
+            {
+                return RedirectToAction("Profil", "Conductor", new { id = (int)TempData["iduser"] });
+            }
+
             if (id == null)
             {
                 return NotFound();
@@ -124,6 +159,15 @@ namespace serviceCar.Controllers
         // GET: VehicleBc/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
+            if (TempData["iduser"] == null)
+            {
+                return RedirectToAction("Login", "Home");
+            }
+            else if (!(bool)TempData["isadmin"])
+            {
+                return RedirectToAction("Profil", "Conductor", new { id = (int)TempData["iduser"] });
+            }
+
             if (id == null)
             {
                 return NotFound();
@@ -145,6 +189,14 @@ namespace serviceCar.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
+            if (TempData["iduser"] == null)
+            {
+                return RedirectToAction("Login", "Home");
+            }
+            else if (!(bool)TempData["isadmin"])
+            {
+                return RedirectToAction("Profil", "Conductor", new { id = (int)TempData["iduser"] });
+            }
             var vehicleBuyContract = await _context.VehicleBuyContract.FindAsync(id);
             _context.VehicleBuyContract.Remove(vehicleBuyContract);
             await _context.SaveChangesAsync();
