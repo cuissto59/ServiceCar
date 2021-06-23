@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -21,13 +22,14 @@ namespace serviceCar.Controllers
         // GET: VehicleGi
         public async Task<IActionResult> Index()
         {
-            if (TempData["iduser"] == null)
+            if (HttpContext.Session.GetInt32("iduser") == 0)
             {
                 return RedirectToAction("Login", "Home");
             }
-            else if (!(bool)TempData["isadmin"])
+            else if (HttpContext.Session.GetString("isadmin") != "True")
             {
-                return RedirectToAction("Profil", "Conductor", new { id = (int)TempData["iduser"] });
+
+                return RedirectToAction("Profil", "Conductor", new { Id = HttpContext.Session.GetInt32("iduser") });
             }
 
             var servicecarContext = _context.VehicleGeneralInfo.Include(v => v.IdVehicleGiNavigation);
@@ -37,13 +39,14 @@ namespace serviceCar.Controllers
         // GET: VehicleGi/Details/5
         public async Task<IActionResult> Details(int? id)
         {
-            if (TempData["iduser"] == null)
+            if (HttpContext.Session.GetInt32("iduser") == 0)
             {
                 return RedirectToAction("Login", "Home");
             }
-            else if (!(bool)TempData["isadmin"])
+            else if (HttpContext.Session.GetString("isadmin") != "True")
             {
-                return RedirectToAction("Profil", "Conductor", new { id = (int)TempData["iduser"] });
+
+                return RedirectToAction("Profil", "Conductor", new { Id = HttpContext.Session.GetInt32("iduser") });
             }
 
             if (id == null)
@@ -65,13 +68,14 @@ namespace serviceCar.Controllers
         // GET: VehicleGi/Create
         public IActionResult Create()
         {
-            if (TempData["iduser"] == null)
+            if (HttpContext.Session.GetInt32("iduser") == 0)
             {
                 return RedirectToAction("Login", "Home");
             }
-            else if (!(bool)TempData["isadmin"])
+            else if (HttpContext.Session.GetString("isadmin") != "True")
             {
-                return RedirectToAction("Profil", "Conductor", new { id = (int)TempData["iduser"] });
+
+                return RedirectToAction("Profil", "Conductor", new { Id = HttpContext.Session.GetInt32("iduser") });
             }
 
             ViewData["IdVehicleGi"] = new SelectList(_context.Vehicle, "IdVehicle", "Description");
@@ -98,13 +102,14 @@ namespace serviceCar.Controllers
         // GET: VehicleGi/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
-            if (TempData["iduser"] == null)
+            if (HttpContext.Session.GetInt32("iduser") == 0)
             {
                 return RedirectToAction("Login", "Home");
             }
-            else if (!(bool)TempData["isadmin"])
+            else if (HttpContext.Session.GetString("isadmin") != "True")
             {
-                return RedirectToAction("Profil", "Conductor", new { id = (int)TempData["iduser"] });
+
+                return RedirectToAction("Profil", "Conductor", new { Id = HttpContext.Session.GetInt32("iduser") });
             }
 
             if (id == null)
@@ -160,18 +165,14 @@ namespace serviceCar.Controllers
         // GET: VehicleGi/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
-            if (TempData["iduser"] == null)
+            if (HttpContext.Session.GetInt32("iduser") == 0)
             {
                 return RedirectToAction("Login", "Home");
             }
-            else if (!(bool)TempData["isadmin"])
+            else if (HttpContext.Session.GetString("isadmin") != "True")
             {
-                return RedirectToAction("Profil", "Conductor", new { id = (int)TempData["iduser"] });
-            }
 
-            if (id == null)
-            {
-                return NotFound();
+                return RedirectToAction("Profil", "Conductor", new { Id = HttpContext.Session.GetInt32("iduser") });
             }
 
             var vehicleGeneralInfo = await _context.VehicleGeneralInfo
