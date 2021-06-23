@@ -1,0 +1,67 @@
+@model IEnumerable<serviceCar.Models.DbModels.VehicleAccident>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Type)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DamageDescription)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.WasInsured)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Date)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IdVehicleAcNavigation)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Type)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DamageDescription)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.WasInsured)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Date)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdVehicleAcNavigation.Description)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.IdVehicleAc">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.IdVehicleAc">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.IdVehicleAc">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+</body>
+</html>

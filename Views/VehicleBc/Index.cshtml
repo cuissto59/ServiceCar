@@ -1,0 +1,79 @@
+@model IEnumerable<serviceCar.Models.DbModels.VehicleBuyContract>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Provider)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BuyDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ContractNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.WarrantyYears)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Amount)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Tva)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IdVehicleBcNavigation)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Provider)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BuyDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ContractNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.WarrantyYears)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Amount)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Tva)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdVehicleBcNavigation.Description)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.IdVehicleBc">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.IdVehicleBc">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.IdVehicleBc">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+</body>
+</html>

@@ -1,0 +1,65 @@
+@model serviceCar.Models.DbModels.VehicleBuyContract
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Edit</title>
+</head>
+<body>
+
+<h4>VehicleBuyContract</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="IdVehicleBc" />
+            <div class="form-group">
+                <label asp-for="Provider" class="control-label"></label>
+                <input asp-for="Provider" class="form-control" />
+                <span asp-validation-for="Provider" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BuyDate" class="control-label"></label>
+                <input asp-for="BuyDate" class="form-control" />
+                <span asp-validation-for="BuyDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ContractNumber" class="control-label"></label>
+                <input asp-for="ContractNumber" class="form-control" />
+                <span asp-validation-for="ContractNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="WarrantyYears" class="control-label"></label>
+                <input asp-for="WarrantyYears" class="form-control" />
+                <span asp-validation-for="WarrantyYears" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Amount" class="control-label"></label>
+                <input asp-for="Amount" class="form-control" />
+                <span asp-validation-for="Amount" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Tva" class="control-label"></label>
+                <input asp-for="Tva" class="form-control" />
+                <span asp-validation-for="Tva" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+</body>
+</html>

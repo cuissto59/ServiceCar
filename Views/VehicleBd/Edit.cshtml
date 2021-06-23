@@ -1,0 +1,50 @@
+@model serviceCar.Models.DbModels.VehicleBreakdown
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Edit</title>
+</head>
+<body>
+
+<h4>VehicleBreakdown</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="IdBreakdown" />
+            <div class="form-group">
+                <label asp-for="IdVehicleBd" class="control-label"></label>
+                <select asp-for="IdVehicleBd" class="form-control" asp-items="ViewBag.IdVehicleBd"></select>
+                <span asp-validation-for="IdVehicleBd" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Problem" class="control-label"></label>
+                <input asp-for="Problem" class="form-control" />
+                <span asp-validation-for="Problem" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Description" class="control-label"></label>
+                <input asp-for="Description" class="form-control" />
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+</body>
+</html>
