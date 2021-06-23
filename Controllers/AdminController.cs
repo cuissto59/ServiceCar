@@ -44,7 +44,7 @@ namespace serviceCar.Controllers
             {
                 return RedirectToAction("Login", "Home");
             }
-
+            
             
             var servicecarContext = _context.Conductor.Include(c => c.UserNavigation);
             return View(await servicecarContext.ToListAsync());
@@ -53,6 +53,10 @@ namespace serviceCar.Controllers
 
         public ActionResult AddCon()
         {
+            if (TempData["iduser"] == null)
+            {
+                return RedirectToAction("Login", "Home");
+            }
 
             return View();
         }
@@ -60,6 +64,10 @@ namespace serviceCar.Controllers
         [HttpPost]
         public ActionResult AddCon(Conductor cond)
         {
+            if (TempData["iduser"] == null)
+            {
+                return RedirectToAction("Login", "Home");
+            }
             //Add Conductor
             var servicecarContext = _context.Conductor.Add(cond);
             _context.SaveChanges();
