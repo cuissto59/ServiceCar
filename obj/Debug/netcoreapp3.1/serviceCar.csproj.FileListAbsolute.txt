@@ -826,8 +826,6 @@ C:\Users\gamer\RiderProjects\serviceCar\bin\Debug\netcoreapp3.1\refs\Microsoft.A
 C:\Users\gamer\RiderProjects\serviceCar\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Connections.Abstractions.dll
 C:\Users\gamer\RiderProjects\serviceCar\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.CookiePolicy.dll
 C:\Users\gamer\RiderProjects\serviceCar\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Cors.dll
-C:\Users\gamer\RiderProjects\serviceCar\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Cryptography.Internal.dll
-C:\Users\gamer\RiderProjects\serviceCar\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
 C:\Users\gamer\RiderProjects\serviceCar\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.DataProtection.Abstractions.dll
 C:\Users\gamer\RiderProjects\serviceCar\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.DataProtection.dll
 C:\Users\gamer\RiderProjects\serviceCar\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.DataProtection.Extensions.dll
@@ -898,16 +896,12 @@ C:\Users\gamer\RiderProjects\serviceCar\bin\Debug\netcoreapp3.1\refs\Microsoft.E
 C:\Users\gamer\RiderProjects\serviceCar\bin\Debug\netcoreapp3.1\refs\Microsoft.Extensions.Configuration.Xml.dll
 C:\Users\gamer\RiderProjects\serviceCar\bin\Debug\netcoreapp3.1\refs\Microsoft.Extensions.Diagnostics.HealthChecks.Abstractions.dll
 C:\Users\gamer\RiderProjects\serviceCar\bin\Debug\netcoreapp3.1\refs\Microsoft.Extensions.Diagnostics.HealthChecks.dll
-C:\Users\gamer\RiderProjects\serviceCar\bin\Debug\netcoreapp3.1\refs\Microsoft.Extensions.FileProviders.Abstractions.dll
 C:\Users\gamer\RiderProjects\serviceCar\bin\Debug\netcoreapp3.1\refs\Microsoft.Extensions.FileProviders.Composite.dll
-C:\Users\gamer\RiderProjects\serviceCar\bin\Debug\netcoreapp3.1\refs\Microsoft.Extensions.FileProviders.Embedded.dll
 C:\Users\gamer\RiderProjects\serviceCar\bin\Debug\netcoreapp3.1\refs\Microsoft.Extensions.FileProviders.Physical.dll
 C:\Users\gamer\RiderProjects\serviceCar\bin\Debug\netcoreapp3.1\refs\Microsoft.Extensions.FileSystemGlobbing.dll
 C:\Users\gamer\RiderProjects\serviceCar\bin\Debug\netcoreapp3.1\refs\Microsoft.Extensions.Hosting.Abstractions.dll
 C:\Users\gamer\RiderProjects\serviceCar\bin\Debug\netcoreapp3.1\refs\Microsoft.Extensions.Hosting.dll
 C:\Users\gamer\RiderProjects\serviceCar\bin\Debug\netcoreapp3.1\refs\Microsoft.Extensions.Http.dll
-C:\Users\gamer\RiderProjects\serviceCar\bin\Debug\netcoreapp3.1\refs\Microsoft.Extensions.Identity.Core.dll
-C:\Users\gamer\RiderProjects\serviceCar\bin\Debug\netcoreapp3.1\refs\Microsoft.Extensions.Identity.Stores.dll
 C:\Users\gamer\RiderProjects\serviceCar\bin\Debug\netcoreapp3.1\refs\Microsoft.Extensions.Localization.Abstractions.dll
 C:\Users\gamer\RiderProjects\serviceCar\bin\Debug\netcoreapp3.1\refs\Microsoft.Extensions.Localization.dll
 C:\Users\gamer\RiderProjects\serviceCar\bin\Debug\netcoreapp3.1\refs\Microsoft.Extensions.Logging.Configuration.dll
@@ -1732,6 +1726,7 @@ C:\Users\gamer\RiderProjects\serviceCar\obj\Debug\netcoreapp3.1\Razor\Views\Vehi
 C:\Users\gamer\RiderProjects\serviceCar\obj\Debug\netcoreapp3.1\Razor\Views\VehicleServices\Details.cshtml.g.cs
 C:\Users\gamer\RiderProjects\serviceCar\obj\Debug\netcoreapp3.1\Razor\Views\VehicleServices\Edit.cshtml.g.cs
 C:\Users\gamer\RiderProjects\serviceCar\obj\Debug\netcoreapp3.1\Razor\Views\VehicleServices\Index.cshtml.g.cs
+<<<<<<< HEAD
 C:\Users\hilia\OneDrive\Bureau\c# project\new one\serviceCar\bin\Debug\netcoreapp3.1\appsettings.Development.json
 C:\Users\hilia\OneDrive\Bureau\c# project\new one\serviceCar\bin\Debug\netcoreapp3.1\appsettings.json
 C:\Users\hilia\OneDrive\Bureau\c# project\new one\serviceCar\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
@@ -2226,3 +2221,20 @@ C:\Users\hilia\OneDrive\Bureau\c# project\new one\serviceCar\obj\Debug\netcoreap
 C:\Users\hilia\OneDrive\Bureau\c# project\new one\serviceCar\obj\Debug\netcoreapp3.1\serviceCar.dll
 C:\Users\hilia\OneDrive\Bureau\c# project\new one\serviceCar\obj\Debug\netcoreapp3.1\serviceCar.pdb
 C:\Users\hilia\OneDrive\Bureau\c# project\new one\serviceCar\obj\Debug\netcoreapp3.1\serviceCar.genruntimeconfig.cache
+=======
+C:\Users\gamer\RiderProjects\serviceCar\obj\Debug\netcoreapp3.1\Razor\Views\VehicleSpending\Create.cshtml.g.cs
+C:\Users\gamer\RiderProjects\serviceCar\obj\Debug\netcoreapp3.1\Razor\Views\VehicleSpending\Delete.cshtml.g.cs
+C:\Users\gamer\RiderProjects\serviceCar\obj\Debug\netcoreapp3.1\Razor\Views\VehicleSpending\Details.cshtml.g.cs
+C:\Users\gamer\RiderProjects\serviceCar\obj\Debug\netcoreapp3.1\Razor\Views\VehicleSpending\Edit.cshtml.g.cs
+C:\Users\gamer\RiderProjects\serviceCar\obj\Debug\netcoreapp3.1\Razor\Views\VehicleSpending\Index.cshtml.g.cs
+C:\Users\gamer\RiderProjects\serviceCar\bin\Debug\netcoreapp3.1\serviceCar.StaticWebAssets.xml
+C:\Users\gamer\RiderProjects\serviceCar\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Users\gamer\RiderProjects\serviceCar\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\Users\gamer\RiderProjects\serviceCar\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Identity.UI.Views.V3.dll
+C:\Users\gamer\RiderProjects\serviceCar\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Identity.UI.Views.V4.dll
+C:\Users\gamer\RiderProjects\serviceCar\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Identity.UI.dll
+C:\Users\gamer\RiderProjects\serviceCar\bin\Debug\netcoreapp3.1\Microsoft.Extensions.FileProviders.Abstractions.dll
+C:\Users\gamer\RiderProjects\serviceCar\bin\Debug\netcoreapp3.1\Microsoft.Extensions.FileProviders.Embedded.dll
+C:\Users\gamer\RiderProjects\serviceCar\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Core.dll
+C:\Users\gamer\RiderProjects\serviceCar\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Stores.dll
+>>>>>>> 951b331 (taha mara min houna)
