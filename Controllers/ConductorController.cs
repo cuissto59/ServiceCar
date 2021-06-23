@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -23,13 +24,17 @@ namespace serviceCar.Controllers
         // GET: Conductor/Profil/1
         public async Task<IActionResult> Profil(int? id)
         {
-           if (TempData["iduser"] == null)
+            if (HttpContext.Session.GetInt32("iduser") == 0)
             {
                 return RedirectToAction("Login", "Home");
             }
-            else if((bool)TempData["isadmin"]){
-                return RedirectToAction("DisplayCon", "Admin",new {Id=(int)TempData["iduser"] });
-            }            
+            else if (HttpContext.Session.GetString("isadmin") == "True")
+            {
+
+                return RedirectToAction("DisplayCon", "Admin", new { Id = HttpContext.Session.GetInt32("iduser") });
+            }
+
+                   
             if (id == null)
             {
                 return NotFound();
@@ -59,12 +64,15 @@ namespace serviceCar.Controllers
         // GET: Conductor/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
-            if (TempData["iduser"] == null)
+
+            if (HttpContext.Session.GetInt32("iduser") == 0)
             {
                 return RedirectToAction("Login", "Home");
             }
-            else if((bool)TempData["isadmin"]){
-                return RedirectToAction("DisplayCon", "Admin",new {Id=(int)TempData["iduser"] });
+            else if (HttpContext.Session.GetString("isadmin") == "True")
+            {
+
+                return RedirectToAction("DisplayCon", "Admin", new { Id = HttpContext.Session.GetInt32("iduser") });
             }
 
             if (id == null)

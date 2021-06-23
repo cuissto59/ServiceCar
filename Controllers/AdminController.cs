@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -29,31 +30,34 @@ namespace serviceCar.Controllers
         // GET: Admin
         public ActionResult Index()
         {
-            if (TempData["iduser"] == null)
+            if (HttpContext.Session.GetInt32("iduser") == 0)
             {
                 return RedirectToAction("Login", "Home");
             }
-            else if(!(bool)TempData["isadmin"]){
-                return RedirectToAction("Profil", "Conductor",new {Id=(int)TempData["iduser"] });
+            else if (HttpContext.Session.GetString("isadmin") != "True")
+            {
+
+                return RedirectToAction("Profil", "Conductor", new { Id = HttpContext.Session.GetInt32("iduser") });
             }
+
             return View();
         }
         //ConductorDB();
 
         public async Task<ActionResult> DisplayConAsync()
         {
-            if (TempData["iduser"] == null)
+            if (HttpContext.Session.GetInt32("iduser") == 0)
             {
                 return RedirectToAction("Login", "Home");
             }
-<<<<<<< HEAD
-            else if(!(bool)TempData["isadmin"]){
-                return RedirectToAction("Profil", "Conductor",new {Id=(int)TempData["iduser"] });
+            else if (HttpContext.Session.GetString("isadmin") != "True")
+            {
+
+                return RedirectToAction("Profil", "Conductor", new { Id = HttpContext.Session.GetInt32("iduser") });
             }
-=======
-            
-            
->>>>>>> 60610dcda1122744cae66a7911f55beaefaedcf0
+
+
+
             var servicecarContext = _context.Conductor.Include(c => c.UserNavigation);
             return View(await servicecarContext.ToListAsync());
 
@@ -61,27 +65,25 @@ namespace serviceCar.Controllers
 
         public ActionResult AddCon()
         {
-            if (TempData["iduser"] == null)
+            if (HttpContext.Session.GetInt32("iduser") == 0)
             {
                 return RedirectToAction("Login", "Home");
             }
-<<<<<<< HEAD
-            else if(!(bool)TempData["isadmin"]){
-                return RedirectToAction("Profil", "Conductor",new {Id=(int)TempData["iduser"] });
-            }
-=======
+            else if (HttpContext.Session.GetString("isadmin") != "True")
+            {
 
->>>>>>> 60610dcda1122744cae66a7911f55beaefaedcf0
+                return RedirectToAction("Profil", "Conductor", new { Id = HttpContext.Session.GetInt32("iduser") });
+            }
+
+
+
             return View();
         }
 
         [HttpPost]
         public ActionResult AddCon(Conductor cond)
         {
-            if (TempData["iduser"] == null)
-            {
-                return RedirectToAction("Login", "Home");
-            }
+            
             //Add Conductor
             
             var servicecarContext = _context.Conductor.Add(cond);
@@ -104,13 +106,16 @@ namespace serviceCar.Controllers
             {
                 return NotFound();
             }
-            if (TempData["iduser"] == null)
+            if (HttpContext.Session.GetInt32("iduser") == 0)
             {
                 return RedirectToAction("Login", "Home");
             }
-            else if(!(bool)TempData["isadmin"]){
-                return RedirectToAction("Profil", "Conductor",new {Id=(int)TempData["iduser"] });
+            else if (HttpContext.Session.GetString("isadmin") != "True")
+            {
+
+                return RedirectToAction("Profil", "Conductor", new { Id = HttpContext.Session.GetInt32("iduser") });
             }
+
 
             var conductor = await _context.Conductor.FirstOrDefaultAsync(m => m.User == id);
             conductor.UserNavigation = await _context.User.FirstOrDefaultAsync(m => m.IdUser == id);
@@ -134,13 +139,6 @@ namespace serviceCar.Controllers
             //SaveProduct(Product product, string userID)
 
 
-                        if (TempData["iduser"] == null)
-            {
-                return RedirectToAction("Login", "Home");
-            }
-            else if(!(bool)TempData["isadmin"]){
-                return RedirectToAction("Profil", "Conductor",new {Id=(int)TempData["iduser"] });
-            }
             if (ModelState.IsValid)
             {
                 try
@@ -196,13 +194,16 @@ namespace serviceCar.Controllers
             //var condToDelete = ConductorList.Where(c => c.id_user == id).FirstOrDefault();
 
 
-                        if (TempData["iduser"] == null)
+            if (HttpContext.Session.GetInt32("iduser") == 0)
             {
                 return RedirectToAction("Login", "Home");
             }
-            else if(!(bool)TempData["isadmin"]){
-                return RedirectToAction("Profil", "Conductor",new {Id=(int)TempData["iduser"] });
+            else if (HttpContext.Session.GetString("isadmin") != "True")
+            {
+
+                return RedirectToAction("Profil", "Conductor", new { Id = HttpContext.Session.GetInt32("iduser") });
             }
+
 
             if (id == null)
             {
@@ -226,13 +227,6 @@ namespace serviceCar.Controllers
             //var condToDelete = ConductorList.Where(c => c.id_user == id).FirstOrDefault();
             //ConductorList.Remove(condToDelete);
 
-                        if (TempData["iduser"] == null)
-            {
-                return RedirectToAction("Login", "Home");
-            }
-            else if(!(bool)TempData["isadmin"]){
-                return RedirectToAction("Profil", "Conductor",new {Id=(int)TempData["iduser"] });
-            }
 
             var con = new Conductor()
             {

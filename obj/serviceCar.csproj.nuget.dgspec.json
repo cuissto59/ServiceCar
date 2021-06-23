@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\hilia\\OneDrive\\Bureau\\c# project\\new one\\serviceCar\\serviceCar.csproj": {}
+    "C:\\Users\\hilia\\OneDrive\\Bureau\\c# project\\new one\\other one\\serviceCar\\serviceCar.csproj": {}
   },
   "projects": {
-    "C:\\Users\\hilia\\OneDrive\\Bureau\\c# project\\new one\\serviceCar\\serviceCar.csproj": {
+    "C:\\Users\\hilia\\OneDrive\\Bureau\\c# project\\new one\\other one\\serviceCar\\serviceCar.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\hilia\\OneDrive\\Bureau\\c# project\\new one\\serviceCar\\serviceCar.csproj",
+        "projectUniqueName": "C:\\Users\\hilia\\OneDrive\\Bureau\\c# project\\new one\\other one\\serviceCar\\serviceCar.csproj",
         "projectName": "serviceCar",
-        "projectPath": "C:\\Users\\hilia\\OneDrive\\Bureau\\c# project\\new one\\serviceCar\\serviceCar.csproj",
+        "projectPath": "C:\\Users\\hilia\\OneDrive\\Bureau\\c# project\\new one\\other one\\serviceCar\\serviceCar.csproj",
         "packagesPath": "C:\\Users\\hilia\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\hilia\\OneDrive\\Bureau\\c# project\\new one\\serviceCar\\obj\\",
+        "outputPath": "C:\\Users\\hilia\\OneDrive\\Bureau\\c# project\\new one\\other one\\serviceCar\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

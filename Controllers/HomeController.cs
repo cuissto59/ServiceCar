@@ -30,8 +30,10 @@ namespace serviceCar.Controllers
 
         public IActionResult Login()
         {
-            TempData["iduser"] = null;
-            TempData["isadmin"] = null;
+
+            HttpContext.Session.SetInt32("iduser", 0);
+            HttpContext.Session.SetString("isadmin", "azert");
+
             methodUsed ="Login";
             ViewBag.methodUsed=methodUsed;
             return View();
@@ -45,13 +47,14 @@ namespace serviceCar.Controllers
                 var user=_context.User.Where(a=>a.Login.Equals(objUser.Login) && a.Password.Equals(objUser.Password) ).FirstOrDefault();
                 if(user!=null ){
 
-                    TempData["iduser"] = user.IdUser;
-                    TempData["isadmin"] = user.IsAdmin;
+                    HttpContext.Session.SetInt32("iduser", user.IdUser);
+                    HttpContext.Session.SetString("isadmin", user.IsAdmin.ToString());
+
                     if (user.IsAdmin==false){
 
                         
-                        HttpContext.Session.SetString("IdUser",user.IdUser.ToString());
-                        return RedirectToAction("Profil", "Conductor",new { id=HttpContext.Session.GetString("IdUser") });
+                        return RedirectToAction("Profil", "Conductor",new { id = HttpContext.Session.GetInt32("iduser") });
+                    
                     }
                     else{
                         HttpContext.Session.SetString("IdUser",user.IdUser.ToString());
