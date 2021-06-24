@@ -1,3 +1,5 @@
+CREATE DATABASE  IF NOT EXISTS `servicecar` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
+USE `servicecar`;
 -- MySQL dump 10.13  Distrib 8.0.22, for Win64 (x86_64)
 --
 -- Host: 127.0.0.1    Database: servicecar
@@ -14,29 +16,6 @@
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
-
---
--- Table structure for table `__efmigrationshistory`
---
-
-DROP TABLE IF EXISTS `__efmigrationshistory`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `__efmigrationshistory` (
-  `MigrationId` varchar(95) NOT NULL,
-  `ProductVersion` varchar(32) NOT NULL,
-  PRIMARY KEY (`MigrationId`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `__efmigrationshistory`
---
-
-LOCK TABLES `__efmigrationshistory` WRITE;
-/*!40000 ALTER TABLE `__efmigrationshistory` DISABLE KEYS */;
-/*!40000 ALTER TABLE `__efmigrationshistory` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `conductor`
@@ -62,7 +41,7 @@ CREATE TABLE `conductor` (
 
 LOCK TABLES `conductor` WRITE;
 /*!40000 ALTER TABLE `conductor` DISABLE KEYS */;
-INSERT INTO `conductor` VALUES (2,'AE203934',615553583,'Kenitra',_binary ''),(5,'AB12620',661394430,'salé',_binary '');
+INSERT INTO `conductor` VALUES (2,'AE2039343',615553583,'Kenitra',_binary ''),(5,'AB12620',661394430,'salé',_binary '');
 /*!40000 ALTER TABLE `conductor` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -90,7 +69,7 @@ CREATE TABLE `user` (
 
 LOCK TABLES `user` WRITE;
 /*!40000 ALTER TABLE `user` DISABLE KEYS */;
-INSERT INTO `user` VALUES (1,'Ahmed','mahmoud','ahmedken111@gmail.co','password',_binary ''),(2,'Ahmed','mahmoud','ahmedken111@gmail.com','0905taha',_binary '\0'),(3,'Ahmed','mahmoud','ahmedken111@gmail.co','password',_binary '\0'),(5,'taha','lahrizi','lahrizitaha@gmail.com','azerty',_binary '\0');
+INSERT INTO `user` VALUES (1,'Ahmed','mahmoud','admin','admin',_binary ''),(2,'Ahmed','mahmoud','conductor2','conductor2',_binary '\0'),(3,'Ahmed','mahmoud','ahmedken111@gmail.co','password',_binary '\0'),(5,'taha','lahrizi','conductor1','conductor1',_binary '\0');
 /*!40000 ALTER TABLE `user` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -119,7 +98,7 @@ CREATE TABLE `vehicle` (
 
 LOCK TABLES `vehicle` WRITE;
 /*!40000 ALTER TABLE `vehicle` DISABLE KEYS */;
-INSERT INTO `vehicle` VALUES (2,5,'test','Yaris city',_binary ''),(4,2,'test','suzuki',_binary '\0'),(6,2,'trest','Dacia sandero',_binary '');
+INSERT INTO `vehicle` VALUES (2,5,'test.jpg','Yaris city',_binary ''),(4,2,'7.png','suzuki',_binary '\0'),(6,2,'trest.jpg','Dacia sandero',_binary '');
 /*!40000 ALTER TABLE `vehicle` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -147,7 +126,7 @@ CREATE TABLE `vehicle_accident` (
 
 LOCK TABLES `vehicle_accident` WRITE;
 /*!40000 ALTER TABLE `vehicle_accident` DISABLE KEYS */;
-INSERT INTO `vehicle_accident` VALUES (2,'moyenne','parchoc et led far endomagees',_binary '','2021-06-23 02:54:29'),(4,'grave','chasis et moteurs detruit',_binary '','2011-09-15 03:14:39');
+INSERT INTO `vehicle_accident` VALUES (2,'moyenne','parchoc et led far endomagees',_binary '\0','2021-06-25 05:54:29'),(4,'grave','chasis et moteurs detruit',_binary '','2011-09-15 03:14:39');
 /*!40000 ALTER TABLE `vehicle_accident` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -166,7 +145,7 @@ CREATE TABLE `vehicle_breakdown` (
   PRIMARY KEY (`id_breakdown`),
   KEY `id_vehicle_bd` (`id_vehicle_bd`),
   CONSTRAINT `vehicle_breakdown_ibfk_1` FOREIGN KEY (`id_vehicle_bd`) REFERENCES `vehicle` (`id_vehicle`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -175,7 +154,7 @@ CREATE TABLE `vehicle_breakdown` (
 
 LOCK TABLES `vehicle_breakdown` WRITE;
 /*!40000 ALTER TABLE `vehicle_breakdown` DISABLE KEYS */;
-INSERT INTO `vehicle_breakdown` VALUES (1,6,'signal de contact en panne','le signal a ete endommager');
+INSERT INTO `vehicle_breakdown` VALUES (1,4,'signal de contact en panne','le signal a ete endommager'),(2,2,'probleme de vidange','depassement du cota du vidange');
 /*!40000 ALTER TABLE `vehicle_breakdown` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -267,7 +246,7 @@ CREATE TABLE `vehicle_general_info` (
 
 LOCK TABLES `vehicle_general_info` WRITE;
 /*!40000 ALTER TABLE `vehicle_general_info` DISABLE KEYS */;
-INSERT INTO `vehicle_general_info` VALUES (2,'17458-أ-2','123','11111','148799','','ACHAT','toyota','yaris ',2014,2015,123000,'chasis','DIESEL');
+INSERT INTO `vehicle_general_info` VALUES (2,'17458-أ-2','123','11111','148799','Voiture','ACHAT','toyota','yaris ',2014,2015,123000,'chasis','DIESEL'),(4,'15697-أ-59','111','78945','1220','Camion','ACHAT','suzuki','pick up',2011,2017,1456000,'chasis','DIESEL');
 /*!40000 ALTER TABLE `vehicle_general_info` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -292,7 +271,7 @@ CREATE TABLE `vehicle_maintenance_plan` (
 
 LOCK TABLES `vehicle_maintenance_plan` WRITE;
 /*!40000 ALTER TABLE `vehicle_maintenance_plan` DISABLE KEYS */;
-INSERT INTO `vehicle_maintenance_plan` VALUES (2,'lorem ipsum');
+INSERT INTO `vehicle_maintenance_plan` VALUES (2,'lorem ipsum'),(4,'cogito decarte');
 /*!40000 ALTER TABLE `vehicle_maintenance_plan` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -318,6 +297,7 @@ CREATE TABLE `vehicle_reparation` (
 
 LOCK TABLES `vehicle_reparation` WRITE;
 /*!40000 ALTER TABLE `vehicle_reparation` DISABLE KEYS */;
+INSERT INTO `vehicle_reparation` VALUES (2,2000.00,'2021-06-23 12:36:37');
 /*!40000 ALTER TABLE `vehicle_reparation` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -346,6 +326,7 @@ CREATE TABLE `vehicle_services` (
 
 LOCK TABLES `vehicle_services` WRITE;
 /*!40000 ALTER TABLE `vehicle_services` DISABLE KEYS */;
+INSERT INTO `vehicle_services` VALUES (2,'vacant',120000,1405.00,'2021-06-23 12:31:06','2021-06-23 12:31:10'),(4,'vacant',14022,1470.00,'2021-06-23 12:31:48','2021-06-23 12:31:54');
 /*!40000 ALTER TABLE `vehicle_services` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -369,7 +350,7 @@ CREATE TABLE `vehicle_spending` (
   KEY `id_conductor_sp` (`id_conductor_sp`),
   CONSTRAINT `vehicle_spending_ibfk_1` FOREIGN KEY (`id_vehicle_sp`) REFERENCES `vehicle` (`id_vehicle`),
   CONSTRAINT `vehicle_spending_ibfk_2` FOREIGN KEY (`id_conductor_sp`) REFERENCES `conductor` (`user`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -378,7 +359,7 @@ CREATE TABLE `vehicle_spending` (
 
 LOCK TABLES `vehicle_spending` WRITE;
 /*!40000 ALTER TABLE `vehicle_spending` DISABLE KEYS */;
-INSERT INTO `vehicle_spending` VALUES (1,2,5,'2021-06-02','02:00:00','vacant',200.00);
+INSERT INTO `vehicle_spending` VALUES (1,2,5,'2021-06-02','02:00:00','vacant',200.00),(2,4,2,'2020-04-02','01:00:00','vacant',450.00);
 /*!40000 ALTER TABLE `vehicle_spending` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -391,4 +372,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-06-23  5:13:25
+-- Dump completed on 2021-06-24 19:15:14
