@@ -1,5 +1,5 @@
 {
-  "FilePath": "/media/hmd377/#Workspace/#Web_Workspace/#asp_workspace/serviceCar/serviceCar.csproj",
+  "FilePath": "/media/hmd377/#Workspace/#Web_Workspace/#asp_workspace/ServiceCar/serviceCar.csproj",
   "Configuration": {
     "ConfigurationName": "MVC-3.0",
     "LanguageVersion": "3.0",
@@ -14402,158 +14402,408 @@
   "RootNamespace": "serviceCar",
   "Documents": [
     {
-      "FilePath": "/media/hmd377/#Workspace/#Web_Workspace/#asp_workspace/serviceCar/Views/Home/ContactUs.cshtml",
-      "TargetPath": "Views\\Home\\ContactUs.cshtml",
+      "FilePath": "/media/hmd377/#Workspace/#Web_Workspace/#asp_workspace/ServiceCar/Views/VehicleMp/Details.cshtml",
+      "TargetPath": "Views\\VehicleMp\\Details.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "/media/hmd377/#Workspace/#Web_Workspace/#asp_workspace/serviceCar/Views/Conductor/Index.cshtml",
-      "TargetPath": "Views\\Conductor\\Index.cshtml",
+      "FilePath": "/media/hmd377/#Workspace/#Web_Workspace/#asp_workspace/ServiceCar/Views/VehicleGi/Details.cshtml",
+      "TargetPath": "Views\\VehicleGi\\Details.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "/media/hmd377/#Workspace/#Web_Workspace/#asp_workspace/serviceCar/Views/Shared/_Layout.cshtml",
-      "TargetPath": "Views\\Shared\\_Layout.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "/media/hmd377/#Workspace/#Web_Workspace/#asp_workspace/serviceCar/Templates/ViewGenerator/Edit.cshtml",
-      "TargetPath": "Templates\\ViewGenerator\\Edit.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "/media/hmd377/#Workspace/#Web_Workspace/#asp_workspace/serviceCar/Views/Shared/_UsersLayout.cshtml",
-      "TargetPath": "Views\\Shared\\_UsersLayout.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "/media/hmd377/#Workspace/#Web_Workspace/#asp_workspace/serviceCar/Templates/ControllerGenerator/ControllerWithActions.cshtml",
-      "TargetPath": "Templates\\ControllerGenerator\\ControllerWithActions.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "/media/hmd377/#Workspace/#Web_Workspace/#asp_workspace/serviceCar/Templates/ControllerGenerator/MvcControllerWithContext.cshtml",
-      "TargetPath": "Templates\\ControllerGenerator\\MvcControllerWithContext.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "/media/hmd377/#Workspace/#Web_Workspace/#asp_workspace/serviceCar/Templates/ViewGenerator/Delete.cshtml",
-      "TargetPath": "Templates\\ViewGenerator\\Delete.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "/media/hmd377/#Workspace/#Web_Workspace/#asp_workspace/serviceCar/Views/Vehicle/Index.cshtml",
-      "TargetPath": "Views\\Vehicle\\Index.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "/media/hmd377/#Workspace/#Web_Workspace/#asp_workspace/serviceCar/Views/Vehicle/Details.cshtml",
-      "TargetPath": "Views\\Vehicle\\Details.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "/media/hmd377/#Workspace/#Web_Workspace/#asp_workspace/serviceCar/Views/Conductor/Profil.cshtml",
-      "TargetPath": "Views\\Conductor\\Profil.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "/media/hmd377/#Workspace/#Web_Workspace/#asp_workspace/serviceCar/Templates/ControllerGenerator/ApiControllerWithActions.cshtml",
-      "TargetPath": "Templates\\ControllerGenerator\\ApiControllerWithActions.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "/media/hmd377/#Workspace/#Web_Workspace/#asp_workspace/serviceCar/Views/Vehicle/Edit.cshtml",
-      "TargetPath": "Views\\Vehicle\\Edit.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "/media/hmd377/#Workspace/#Web_Workspace/#asp_workspace/serviceCar/Views/_ViewImports.cshtml",
-      "TargetPath": "Views\\_ViewImports.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "/media/hmd377/#Workspace/#Web_Workspace/#asp_workspace/serviceCar/Views/Shared/Error.cshtml",
-      "TargetPath": "Views\\Shared\\Error.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "/media/hmd377/#Workspace/#Web_Workspace/#asp_workspace/serviceCar/Templates/ViewGenerator/_ValidationScriptsPartial.cshtml",
-      "TargetPath": "Templates\\ViewGenerator\\_ValidationScriptsPartial.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "/media/hmd377/#Workspace/#Web_Workspace/#asp_workspace/serviceCar/Templates/ControllerGenerator/ApiEmptyController.cshtml",
-      "TargetPath": "Templates\\ControllerGenerator\\ApiEmptyController.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "/media/hmd377/#Workspace/#Web_Workspace/#asp_workspace/serviceCar/Views/Vehicle/Delete.cshtml",
-      "TargetPath": "Views\\Vehicle\\Delete.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "/media/hmd377/#Workspace/#Web_Workspace/#asp_workspace/serviceCar/Templates/ViewGenerator/List.cshtml",
-      "TargetPath": "Templates\\ViewGenerator\\List.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "/media/hmd377/#Workspace/#Web_Workspace/#asp_workspace/serviceCar/Templates/ViewGenerator/Details.cshtml",
-      "TargetPath": "Templates\\ViewGenerator\\Details.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "/media/hmd377/#Workspace/#Web_Workspace/#asp_workspace/serviceCar/Views/Shared/_ValidationScriptsPartial.cshtml",
-      "TargetPath": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "/media/hmd377/#Workspace/#Web_Workspace/#asp_workspace/serviceCar/Views/Home/Login.cshtml",
-      "TargetPath": "Views\\Home\\Login.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "/media/hmd377/#Workspace/#Web_Workspace/#asp_workspace/serviceCar/Views/Vehicle/Create.cshtml",
-      "TargetPath": "Views\\Vehicle\\Create.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "/media/hmd377/#Workspace/#Web_Workspace/#asp_workspace/serviceCar/Views/_ViewStart.cshtml",
-      "TargetPath": "Views\\_ViewStart.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "/media/hmd377/#Workspace/#Web_Workspace/#asp_workspace/serviceCar/Templates/ViewGenerator/Create.cshtml",
-      "TargetPath": "Templates\\ViewGenerator\\Create.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "/media/hmd377/#Workspace/#Web_Workspace/#asp_workspace/serviceCar/Views/Conductor/Edit.cshtml",
-      "TargetPath": "Views\\Conductor\\Edit.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "/media/hmd377/#Workspace/#Web_Workspace/#asp_workspace/serviceCar/Views/Home/AboutUs.cshtml",
-      "TargetPath": "Views\\Home\\AboutUs.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "/media/hmd377/#Workspace/#Web_Workspace/#asp_workspace/serviceCar/Templates/ViewGenerator/Empty.cshtml",
-      "TargetPath": "Templates\\ViewGenerator\\Empty.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "/media/hmd377/#Workspace/#Web_Workspace/#asp_workspace/serviceCar/Templates/ControllerGenerator/EmptyController.cshtml",
-      "TargetPath": "Templates\\ControllerGenerator\\EmptyController.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "/media/hmd377/#Workspace/#Web_Workspace/#asp_workspace/serviceCar/Views/Home/Privacy.cshtml",
+      "FilePath": "/media/hmd377/#Workspace/#Web_Workspace/#asp_workspace/ServiceCar/Views/Home/Privacy.cshtml",
       "TargetPath": "Views\\Home\\Privacy.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "/media/hmd377/#Workspace/#Web_Workspace/#asp_workspace/serviceCar/Templates/ControllerGenerator/ApiControllerWithContext.cshtml",
+      "FilePath": "/media/hmd377/#Workspace/#Web_Workspace/#asp_workspace/ServiceCar/Views/VehicleAccident/Delete.cshtml",
+      "TargetPath": "Views\\VehicleAccident\\Delete.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/media/hmd377/#Workspace/#Web_Workspace/#asp_workspace/ServiceCar/Views/VehicleServices/Index.cshtml",
+      "TargetPath": "Views\\VehicleServices\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/media/hmd377/#Workspace/#Web_Workspace/#asp_workspace/ServiceCar/Views/Vehicle/Index.cshtml",
+      "TargetPath": "Views\\Vehicle\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/media/hmd377/#Workspace/#Web_Workspace/#asp_workspace/ServiceCar/Views/VehicleAccident/Edit.cshtml",
+      "TargetPath": "Views\\VehicleAccident\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/media/hmd377/#Workspace/#Web_Workspace/#asp_workspace/ServiceCar/Views/Shared/_Layout.cshtml",
+      "TargetPath": "Views\\Shared\\_Layout.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/media/hmd377/#Workspace/#Web_Workspace/#asp_workspace/ServiceCar/Templates/ControllerGenerator/ApiControllerWithActions.cshtml",
+      "TargetPath": "Templates\\ControllerGenerator\\ApiControllerWithActions.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/media/hmd377/#Workspace/#Web_Workspace/#asp_workspace/ServiceCar/Views/VehicleReparation/Delete.cshtml",
+      "TargetPath": "Views\\VehicleReparation\\Delete.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/media/hmd377/#Workspace/#Web_Workspace/#asp_workspace/ServiceCar/Views/Shared/_ValidationScriptsPartial.cshtml",
+      "TargetPath": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/media/hmd377/#Workspace/#Web_Workspace/#asp_workspace/ServiceCar/Views/VehicleSpending/Index.cshtml",
+      "TargetPath": "Views\\VehicleSpending\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/media/hmd377/#Workspace/#Web_Workspace/#asp_workspace/ServiceCar/Views/VehicleBd/Details.cshtml",
+      "TargetPath": "Views\\VehicleBd\\Details.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/media/hmd377/#Workspace/#Web_Workspace/#asp_workspace/ServiceCar/Views/VehicleMp/Edit.cshtml",
+      "TargetPath": "Views\\VehicleMp\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/media/hmd377/#Workspace/#Web_Workspace/#asp_workspace/ServiceCar/Views/VehicleAccident/Index.cshtml",
+      "TargetPath": "Views\\VehicleAccident\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/media/hmd377/#Workspace/#Web_Workspace/#asp_workspace/ServiceCar/Views/Admin/DeleteCon.cshtml",
+      "TargetPath": "Views\\Admin\\DeleteCon.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/media/hmd377/#Workspace/#Web_Workspace/#asp_workspace/ServiceCar/Views/Admin/DisplayCon.cshtml",
+      "TargetPath": "Views\\Admin\\DisplayCon.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/media/hmd377/#Workspace/#Web_Workspace/#asp_workspace/ServiceCar/Views/Shared/Error.cshtml",
+      "TargetPath": "Views\\Shared\\Error.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/media/hmd377/#Workspace/#Web_Workspace/#asp_workspace/ServiceCar/Views/VehicleMp/Delete.cshtml",
+      "TargetPath": "Views\\VehicleMp\\Delete.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/media/hmd377/#Workspace/#Web_Workspace/#asp_workspace/ServiceCar/Views/VehicleSpending/Details.cshtml",
+      "TargetPath": "Views\\VehicleSpending\\Details.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/media/hmd377/#Workspace/#Web_Workspace/#asp_workspace/ServiceCar/Views/VehicleGi/Edit.cshtml",
+      "TargetPath": "Views\\VehicleGi\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/media/hmd377/#Workspace/#Web_Workspace/#asp_workspace/ServiceCar/Views/VehicleBd/Edit.cshtml",
+      "TargetPath": "Views\\VehicleBd\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/media/hmd377/#Workspace/#Web_Workspace/#asp_workspace/ServiceCar/Views/VehicleAccident/Create.cshtml",
+      "TargetPath": "Views\\VehicleAccident\\Create.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/media/hmd377/#Workspace/#Web_Workspace/#asp_workspace/ServiceCar/Templates/ViewGenerator/Details.cshtml",
+      "TargetPath": "Templates\\ViewGenerator\\Details.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/media/hmd377/#Workspace/#Web_Workspace/#asp_workspace/ServiceCar/Templates/ControllerGenerator/ApiEmptyController.cshtml",
+      "TargetPath": "Templates\\ControllerGenerator\\ApiEmptyController.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/media/hmd377/#Workspace/#Web_Workspace/#asp_workspace/ServiceCar/Views/Home/AboutUs.cshtml",
+      "TargetPath": "Views\\Home\\AboutUs.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/media/hmd377/#Workspace/#Web_Workspace/#asp_workspace/ServiceCar/Views/VehicleAccident/Details.cshtml",
+      "TargetPath": "Views\\VehicleAccident\\Details.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/media/hmd377/#Workspace/#Web_Workspace/#asp_workspace/ServiceCar/Views/VehicleMp/Create.cshtml",
+      "TargetPath": "Views\\VehicleMp\\Create.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/media/hmd377/#Workspace/#Web_Workspace/#asp_workspace/ServiceCar/Views/VehicleMp/Index.cshtml",
+      "TargetPath": "Views\\VehicleMp\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/media/hmd377/#Workspace/#Web_Workspace/#asp_workspace/ServiceCar/Views/VehicleBc/Index.cshtml",
+      "TargetPath": "Views\\VehicleBc\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/media/hmd377/#Workspace/#Web_Workspace/#asp_workspace/ServiceCar/Views/VehicleReparation/Index.cshtml",
+      "TargetPath": "Views\\VehicleReparation\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/media/hmd377/#Workspace/#Web_Workspace/#asp_workspace/ServiceCar/Views/_ViewStart.cshtml",
+      "TargetPath": "Views\\_ViewStart.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/media/hmd377/#Workspace/#Web_Workspace/#asp_workspace/ServiceCar/Views/VehicleServices/Delete.cshtml",
+      "TargetPath": "Views\\VehicleServices\\Delete.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/media/hmd377/#Workspace/#Web_Workspace/#asp_workspace/ServiceCar/Templates/ControllerGenerator/EmptyController.cshtml",
+      "TargetPath": "Templates\\ControllerGenerator\\EmptyController.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/media/hmd377/#Workspace/#Web_Workspace/#asp_workspace/ServiceCar/Views/Conductor/Profil.cshtml",
+      "TargetPath": "Views\\Conductor\\Profil.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/media/hmd377/#Workspace/#Web_Workspace/#asp_workspace/ServiceCar/Views/VehicleServices/Details.cshtml",
+      "TargetPath": "Views\\VehicleServices\\Details.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/media/hmd377/#Workspace/#Web_Workspace/#asp_workspace/ServiceCar/Views/VehicleBc/Details.cshtml",
+      "TargetPath": "Views\\VehicleBc\\Details.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/media/hmd377/#Workspace/#Web_Workspace/#asp_workspace/ServiceCar/Views/VehicleBc/Edit.cshtml",
+      "TargetPath": "Views\\VehicleBc\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/media/hmd377/#Workspace/#Web_Workspace/#asp_workspace/ServiceCar/Views/Conductor/Index.cshtml",
+      "TargetPath": "Views\\Conductor\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/media/hmd377/#Workspace/#Web_Workspace/#asp_workspace/ServiceCar/Views/VehicleBd/Delete.cshtml",
+      "TargetPath": "Views\\VehicleBd\\Delete.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/media/hmd377/#Workspace/#Web_Workspace/#asp_workspace/ServiceCar/Views/Admin/AddCon.cshtml",
+      "TargetPath": "Views\\Admin\\AddCon.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/media/hmd377/#Workspace/#Web_Workspace/#asp_workspace/ServiceCar/Views/VehicleServices/Create.cshtml",
+      "TargetPath": "Views\\VehicleServices\\Create.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/media/hmd377/#Workspace/#Web_Workspace/#asp_workspace/ServiceCar/Templates/ViewGenerator/Create.cshtml",
+      "TargetPath": "Templates\\ViewGenerator\\Create.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/media/hmd377/#Workspace/#Web_Workspace/#asp_workspace/ServiceCar/Templates/ViewGenerator/Edit.cshtml",
+      "TargetPath": "Templates\\ViewGenerator\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/media/hmd377/#Workspace/#Web_Workspace/#asp_workspace/ServiceCar/Views/VehicleReparation/Details.cshtml",
+      "TargetPath": "Views\\VehicleReparation\\Details.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/media/hmd377/#Workspace/#Web_Workspace/#asp_workspace/ServiceCar/Views/VehicleSpending/Edit.cshtml",
+      "TargetPath": "Views\\VehicleSpending\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/media/hmd377/#Workspace/#Web_Workspace/#asp_workspace/ServiceCar/Views/VehicleFuel/Details.cshtml",
+      "TargetPath": "Views\\VehicleFuel\\Details.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/media/hmd377/#Workspace/#Web_Workspace/#asp_workspace/ServiceCar/Views/VehicleGi/Index.cshtml",
+      "TargetPath": "Views\\VehicleGi\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/media/hmd377/#Workspace/#Web_Workspace/#asp_workspace/ServiceCar/Views/VehicleSpending/Create.cshtml",
+      "TargetPath": "Views\\VehicleSpending\\Create.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/media/hmd377/#Workspace/#Web_Workspace/#asp_workspace/ServiceCar/Views/Vehicle/Create.cshtml",
+      "TargetPath": "Views\\Vehicle\\Create.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/media/hmd377/#Workspace/#Web_Workspace/#asp_workspace/ServiceCar/Views/Vehicle/Details.cshtml",
+      "TargetPath": "Views\\Vehicle\\Details.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/media/hmd377/#Workspace/#Web_Workspace/#asp_workspace/ServiceCar/Views/Vehicle/Delete.cshtml",
+      "TargetPath": "Views\\Vehicle\\Delete.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/media/hmd377/#Workspace/#Web_Workspace/#asp_workspace/ServiceCar/Views/VehicleGi/Delete.cshtml",
+      "TargetPath": "Views\\VehicleGi\\Delete.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/media/hmd377/#Workspace/#Web_Workspace/#asp_workspace/ServiceCar/Views/_ViewImports.cshtml",
+      "TargetPath": "Views\\_ViewImports.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/media/hmd377/#Workspace/#Web_Workspace/#asp_workspace/ServiceCar/Views/VehicleBc/Delete.cshtml",
+      "TargetPath": "Views\\VehicleBc\\Delete.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/media/hmd377/#Workspace/#Web_Workspace/#asp_workspace/ServiceCar/Views/Home/ContactUs.cshtml",
+      "TargetPath": "Views\\Home\\ContactUs.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/media/hmd377/#Workspace/#Web_Workspace/#asp_workspace/ServiceCar/Views/VehicleGi/Create.cshtml",
+      "TargetPath": "Views\\VehicleGi\\Create.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/media/hmd377/#Workspace/#Web_Workspace/#asp_workspace/ServiceCar/Templates/ViewGenerator/Delete.cshtml",
+      "TargetPath": "Templates\\ViewGenerator\\Delete.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/media/hmd377/#Workspace/#Web_Workspace/#asp_workspace/ServiceCar/Templates/ViewGenerator/List.cshtml",
+      "TargetPath": "Templates\\ViewGenerator\\List.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/media/hmd377/#Workspace/#Web_Workspace/#asp_workspace/ServiceCar/Views/VehicleReparation/Create.cshtml",
+      "TargetPath": "Views\\VehicleReparation\\Create.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/media/hmd377/#Workspace/#Web_Workspace/#asp_workspace/ServiceCar/Templates/ViewGenerator/_ValidationScriptsPartial.cshtml",
+      "TargetPath": "Templates\\ViewGenerator\\_ValidationScriptsPartial.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/media/hmd377/#Workspace/#Web_Workspace/#asp_workspace/ServiceCar/Views/VehicleFuel/Delete.cshtml",
+      "TargetPath": "Views\\VehicleFuel\\Delete.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/media/hmd377/#Workspace/#Web_Workspace/#asp_workspace/ServiceCar/Views/VehicleReparation/Edit.cshtml",
+      "TargetPath": "Views\\VehicleReparation\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/media/hmd377/#Workspace/#Web_Workspace/#asp_workspace/ServiceCar/Templates/ControllerGenerator/ControllerWithActions.cshtml",
+      "TargetPath": "Templates\\ControllerGenerator\\ControllerWithActions.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/media/hmd377/#Workspace/#Web_Workspace/#asp_workspace/ServiceCar/Views/Conductor/Edit.cshtml",
+      "TargetPath": "Views\\Conductor\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/media/hmd377/#Workspace/#Web_Workspace/#asp_workspace/ServiceCar/Views/Admin/DetailVehicleFuel.cshtml",
+      "TargetPath": "Views\\Admin\\DetailVehicleFuel.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/media/hmd377/#Workspace/#Web_Workspace/#asp_workspace/ServiceCar/Views/VehicleFuel/Index.cshtml",
+      "TargetPath": "Views\\VehicleFuel\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/media/hmd377/#Workspace/#Web_Workspace/#asp_workspace/ServiceCar/Views/VehicleFuel/Create.cshtml",
+      "TargetPath": "Views\\VehicleFuel\\Create.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/media/hmd377/#Workspace/#Web_Workspace/#asp_workspace/ServiceCar/Templates/ControllerGenerator/MvcControllerWithContext.cshtml",
+      "TargetPath": "Templates\\ControllerGenerator\\MvcControllerWithContext.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/media/hmd377/#Workspace/#Web_Workspace/#asp_workspace/ServiceCar/Templates/ViewGenerator/Empty.cshtml",
+      "TargetPath": "Templates\\ViewGenerator\\Empty.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/media/hmd377/#Workspace/#Web_Workspace/#asp_workspace/ServiceCar/Views/VehicleServices/Edit.cshtml",
+      "TargetPath": "Views\\VehicleServices\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/media/hmd377/#Workspace/#Web_Workspace/#asp_workspace/ServiceCar/Views/VehicleFuel/Edit.cshtml",
+      "TargetPath": "Views\\VehicleFuel\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/media/hmd377/#Workspace/#Web_Workspace/#asp_workspace/ServiceCar/Views/Home/Login.cshtml",
+      "TargetPath": "Views\\Home\\Login.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/media/hmd377/#Workspace/#Web_Workspace/#asp_workspace/ServiceCar/Views/VehicleBc/Create.cshtml",
+      "TargetPath": "Views\\VehicleBc\\Create.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/media/hmd377/#Workspace/#Web_Workspace/#asp_workspace/ServiceCar/Views/VehicleSpending/Delete.cshtml",
+      "TargetPath": "Views\\VehicleSpending\\Delete.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/media/hmd377/#Workspace/#Web_Workspace/#asp_workspace/ServiceCar/Views/VehicleBd/Index.cshtml",
+      "TargetPath": "Views\\VehicleBd\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/media/hmd377/#Workspace/#Web_Workspace/#asp_workspace/ServiceCar/Views/Admin/EditCon.cshtml",
+      "TargetPath": "Views\\Admin\\EditCon.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/media/hmd377/#Workspace/#Web_Workspace/#asp_workspace/ServiceCar/Templates/ControllerGenerator/ApiControllerWithContext.cshtml",
       "TargetPath": "Templates\\ControllerGenerator\\ApiControllerWithContext.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/media/hmd377/#Workspace/#Web_Workspace/#asp_workspace/ServiceCar/Views/VehicleBd/Create.cshtml",
+      "TargetPath": "Views\\VehicleBd\\Create.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/media/hmd377/#Workspace/#Web_Workspace/#asp_workspace/ServiceCar/Views/Shared/_UsersLayout.cshtml",
+      "TargetPath": "Views\\Shared\\_UsersLayout.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/media/hmd377/#Workspace/#Web_Workspace/#asp_workspace/ServiceCar/Views/Vehicle/Edit.cshtml",
+      "TargetPath": "Views\\Vehicle\\Edit.cshtml",
       "FileKind": "mvc"
     }
   ],
