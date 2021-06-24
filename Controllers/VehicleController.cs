@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
@@ -13,10 +15,12 @@ namespace serviceCar.Controllers
     public class VehicleController : Controller
     {
         private readonly servicecarContext _context;
+        private readonly IWebHostEnvironment _hostEnvironment;
 
-        public VehicleController(servicecarContext context)
+        public VehicleController(servicecarContext context, IWebHostEnvironment hostEnvironment)
         {
             _context = context;
+            this._hostEnvironment = hostEnvironment;
         }
 
         // GET: Vehicle
@@ -93,7 +97,7 @@ namespace serviceCar.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("IdVehicle,VehicleConductor,Img,Description,InUse")] Vehicle vehicle)
+        public async Task<IActionResult> Create([Bind("VehicleConductor,Description,InUse")] Vehicle vehicle, IFormFile img)
         {
             if (HttpContext.Session.GetInt32("iduser") == 0)
             {
@@ -106,14 +110,31 @@ namespace serviceCar.Controllers
             }
             if (ModelState.IsValid)
             {
-                _context.Add(vehicle);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                string path = Path.Combine(_hostEnvironment.WebRootPath, "img");
+                string ext = Path.GetExtension(img.FileName);
+                var result = _context.Vehicle;
+                string new_name;
+                if (result.Any()) { new_name = _context.Vehicle.Max(u => u.IdVehicle) + 1 + ext; }
+                else new_name = img.FileName;
+
+                if (img.Length > 0)
+                {
+                    string filePath = Path.Combine(path, new_name);
+                    using (Stream fileStream = new FileStream(filePath, FileMode.Create))
+                    {
+                        await img.CopyToAsync(fileStream);
+                    }
+
+                    vehicle.Img = new_name;
+                    _context.Add(vehicle);
+                    await _context.SaveChangesAsync();
+                    return RedirectToAction(nameof(Index));
+
+                }
             }
-            ViewData["VehicleConductor"] = new SelectList(_context.Conductor, "User", "Adress", vehicle.VehicleConductor);
+            ViewData["VehicleConductor"] = new SelectList(_context.Conductor, "User", "User", vehicle.VehicleConductor);
             return View(vehicle);
         }
-
         // GET: Vehicle/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
