@@ -1,7 +1,9 @@
 
 English:
 
-Firstly execute file db/servicecar.sql in your RDBMS Mysql(the script is compatible unfortunatly just with Mysql).
+#How To Use
+
+Hello EveryOne , Firstly execute file db/servicecar.sql in your RDBMS Mysql(the script is compatible unfortunatly just with Mysql).
 
 secondly go change files :
 
@@ -23,7 +25,7 @@ And Enjoy :)
 
 Francais:
 
-Premièrement veuillez executer le fichier db/servicecar.sql dans votre RDBMS Mysql .
+Bonjour tout le monde ,Premièrement veuillez executer le fichier db/servicecar.sql dans votre RDBMS Mysql .
 
 Deuxièmement veuillez changer le fichier 
             appsettings.json line 12 avec vos informations sur la base de donnée;
